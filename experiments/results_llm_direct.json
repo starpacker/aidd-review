@@ -1,0 +1,940 @@
+[
+  {
+    "name": "Imatinib",
+    "smiles": "CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 6,
+    "overall_score": 6.1,
+    "recommendation": "Caution",
+    "concerns": [
+      "Molecular weight likely exceeds 500 Da (~533), borderline Lipinski violation",
+      "Contains a piperazine ring with basic nitrogen centers - potential for hERG channel inhibition",
+      "Pyrimidine-aniline linkage may be susceptible to metabolic oxidation and potential reactive metabolite formation",
+      "Multiple aromatic rings (4+) increase planarity and risk of CYP inhibition and poor solubility",
+      "High number of rotatable bonds may reduce oral bioavailability",
+      "Diaminopyrimidine motif may carry phototoxicity risk"
+    ],
+    "strengths": [
+      "Resembles known kinase inhibitor pharmacophore (aminopyrimidine with pyridine), suggesting validated target class",
+      "Structural similarity to imatinib/nilotinib class of kinase inhibitors with proven clinical success",
+      "Piperazine-methylbenzamide moiety provides good water solubility handle via salt formation",
+      "Modular synthetic design allows for straightforward SAR exploration",
+      "Amide bond provides metabolic stability compared to ester alternatives"
+    ],
+    "reasoning": "This molecule closely resembles approved kinase inhibitors like imatinib, featuring an aminopyrimidine-pyridine warhead connected via a toluidine linker to a benzamide bearing an N-methylpiperazine. While the pharmacophore is well-validated, the molecule has borderline MW, multiple aromatic rings raising solubility and CYP inhibition concerns, and the basic piperazine nitrogen poses hERG liability risk. The compound is synthetically accessible but would need careful ADMET profiling, particularly for hERG, CYP inhibition, and phototoxicity before advancement."
+  },
+  {
+    "name": "Sofosbuvir",
+    "smiles": "CC(C)OC(=O)C(C)NP(=O)(OCC1C(C(C(O1)N2C=CC(=O)NC2=O)(C)F)O)OC3=CC=CC=C3",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 6,
+    "synthetic_feasibility": 5,
+    "clinical_potential": 8,
+    "overall_score": 7.2,
+    "recommendation": "Advance",
+    "concerns": [
+      "Phenyl phosphoramidate prodrug moiety may raise metabolic stability concerns across species",
+      "Multiple stereocenters require careful control of stereochemistry during synthesis",
+      "Phosphoramidate linkage susceptible to hydrolysis - requires careful formulation",
+      "Aromatic phosphoester (phenoxy group) may generate phenol upon metabolism, potential toxicity consideration"
+    ],
+    "strengths": [
+      "This is a ProTide (phosphoramidate prodrug) nucleoside analog, a well-validated drug design strategy (similar to sofosbuvir/remdesivir)",
+      "2'-deoxy-2'-fluoro-2'-C-methyl sugar modification provides metabolic stability and potent antiviral activity",
+      "Uracil nucleobase with proven antiviral pharmacology",
+      "Isopropyl ester and alanine amino acid promoiety enable efficient intracellular delivery of the active nucleotide monophosphate",
+      "Molecular weight (~529) and lipophilicity are within acceptable range for oral bioavailability",
+      "Closely resembles approved antiviral nucleotide prodrugs with established clinical precedent"
+    ],
+    "reasoning": "This molecule is a phosphoramidate (ProTide) prodrug of a 2'-fluoro-2'-C-methyluridine nucleoside, closely resembling the structural framework of sofosbuvir and related HCV/antiviral nucleotide analogs. The ProTide strategy is clinically validated, enabling bypass of the rate-limiting first phosphorylation step. The 2'-F, 2'-C-methyl sugar modification is a hallmark of potent polymerase inhibitors. While synthesis is moderately complex due to stereochemistry at phosphorus and multiple chiral centers, the clinical precedent for this class strongly supports advancement."
+  },
+  {
+    "name": "Osimertinib",
+    "smiles": "COC1=C(C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl)NC(=O)C=C",
+    "category": "A_approved",
+    "drug_likeness": 8,
+    "admet_safety": 5,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 7,
+    "overall_score": 6.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "Michael acceptor acrylamide warhead poses potential off-target reactivity and toxicity risk",
+      "Acrylamide moiety may cause GSH depletion and hepatotoxicity",
+      "Potential for skin sensitization due to electrophilic warhead",
+      "Chloro-fluoroaniline substituent may generate reactive metabolites via CYP-mediated oxidation"
+    ],
+    "strengths": [
+      "4-anilinoquinazoline scaffold is a well-validated kinase inhibitor pharmacophore (similar to erlotinib/gefitinib/lapatinib)",
+      "Molecular weight ~345 Da, well within Lipinski guidelines",
+      "Good balance of lipophilicity with methoxy and amine groups for solubility",
+      "Acrylamide warhead enables covalent irreversible inhibition strategy (similar to afatinib/osimertinib) for enhanced potency and selectivity",
+      "Straightforward synthetic route via SNAr displacement and acylation chemistry",
+      "Low molecular complexity with good ligand efficiency potential"
+    ],
+    "reasoning": "This molecule closely resembles FDA-approved covalent EGFR inhibitors like afatinib, featuring a 4-anilinoquinazoline core with a 3-chloro-4-fluoroaniline and an acrylamide Michael acceptor at the 6/7-position. The acrylamide warhead is intentional for covalent binding to Cys797 in EGFR, a validated clinical strategy. However, the Michael acceptor raises inherent ADMET concerns regarding off-target reactivity, and the halogenated aniline may form reactive metabolites. Given the strong clinical precedent for this chemotype, the molecule has reasonable clinical potential but warrants careful safety profiling."
+  },
+  {
+    "name": "Olaparib",
+    "smiles": "O=C1C2=CC=CC=C2C(=O)N1CC3=CC=C(C=C3)C(=O)N4CCNCC4",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 4,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 4,
+    "overall_score": 5.0,
+    "recommendation": "Caution",
+    "concerns": [
+      "Contains a phthalimide (isoindole-1,3-dione) moiety which is associated with teratogenicity (thalidomide-like structural alert)",
+      "Phthalimide group may undergo hydrolysis in vivo leading to reactive metabolites",
+      "The piperazine nitrogen (secondary amine) may be a site for CYP-mediated metabolism and potential hERG channel liability",
+      "Planar aromatic phthalimide system may contribute to phototoxicity risk"
+    ],
+    "strengths": [
+      "Molecular weight (~349 Da) well within Lipinski's Rule of Five",
+      "Good balance of hydrogen bond donors (1 NH in piperazine) and acceptors (4-5)",
+      "Modular structure amenable to straightforward SAR exploration",
+      "Synthetic feasibility is high: phthalimide alkylation followed by amide coupling with piperazine benzoic acid derivative",
+      "Piperazine moiety provides a basic center for salt formation and improved solubility"
+    ],
+    "reasoning": "This molecule features a phthalimide connected via a methylene linker to a para-substituted benzamide bearing a piperazine group. While the physicochemical properties are drug-like (MW ~349, reasonable logP, appropriate HBD/HBA count), the phthalimide core raises significant safety concerns due to its well-documented association with teratogenicity and potential hydrolytic instability. The piperazine secondary amine adds solubility but also introduces hERG liability risk. Overall, the structural toxicity alert from the phthalimide warrants caution despite otherwise favorable drug-like properties."
+  },
+  {
+    "name": "Venetoclax",
+    "smiles": "CC1(CCC(=C(C1)C2=CC=C(C=C2)Cl)CN3CCN(CC3)C4=CC(=C(C=C4)C(=O)NS(=O)(=O)C5=CC(=C(C=C5)NCC6CCOCC6)[N+](=O)[O-])OC7=CC=CC=C7)C",
+    "category": "A_approved",
+    "drug_likeness": 2,
+    "admet_safety": 3,
+    "synthetic_feasibility": 4,
+    "clinical_potential": 3,
+    "overall_score": 2.9,
+    "recommendation": "Reject",
+    "concerns": [
+      "Molecular weight far exceeds 500 Da (estimated ~750+ Da), violating Lipinski's Rule of Five",
+      "Nitro group ([N+](=O)[O-]) is a structural alert for mutagenicity and toxicity",
+      "Excessive number of hydrogen bond acceptors (>10) and rotatable bonds, reducing oral bioavailability",
+      "High lipophilicity with multiple aromatic rings (5 rings) likely leading to poor solubility",
+      "Sulfonamide acylsulfonamide linkage may be metabolically labile",
+      "Piperazine ring connected to multiple large substituents increases molecular complexity and CYP inhibition risk",
+      "Morpholine-containing amine substituent on the nitroaromatic ring adds further MW and complexity",
+      "Phenoxy ether group adds additional metabolic soft spots (O-dealkylation)"
+    ],
+    "strengths": [
+      "Contains pharmacologically relevant piperazine motif commonly seen in kinase/protease inhibitors",
+      "Acylsulfonamide moiety can serve as an effective zinc-binding or target-binding group",
+      "Structural complexity suggests designed selectivity for a specific biological target"
+    ],
+    "reasoning": "This molecule is excessively large and complex, with an estimated MW well above 750 Da, far exceeding drug-likeness thresholds. The presence of a nitro group is a major safety concern due to well-documented mutagenicity risks. The combination of high molecular weight, multiple aromatic rings, numerous heteroatoms, and metabolically vulnerable groups (phenoxy ether, secondary amine on nitroaromatic) collectively predict poor oral bioavailability, potential CYP inhibition, and toxicity liabilities. While the pharmacophore elements suggest rational design toward a specific target, the overall molecular properties make this a poor drug candidate."
+  },
+  {
+    "name": "Lenvatinib",
+    "smiles": "COC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=C(C=C3)OC4=CC=CC(=C4)Cl)C(=O)N",
+    "category": "A_approved",
+    "drug_likeness": 8,
+    "admet_safety": 6,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 7,
+    "overall_score": 7.0,
+    "recommendation": "Advance",
+    "concerns": [
+      "Diaryl ether linkage with chlorophenyl group may raise metabolic stability concerns and potential reactive metabolite formation",
+      "4-Aminoquinazoline scaffold is associated with EGFR/kinase inhibition and known class-related toxicities (skin rash, diarrhea, hepatotoxicity)",
+      "Chloroaryl ether moiety may contribute to CYP inhibition",
+      "Potential for phototoxicity due to extended aromatic conjugation"
+    ],
+    "strengths": [
+      "Quinazoline core is a well-validated pharmacophore in approved kinase inhibitors (e.g., erlotinib, gefitinib, lapatinib)",
+      "Molecular weight (~394 Da) and overall properties are within Lipinski's Rule of Five",
+      "Primary amide group provides hydrogen bonding capability and improves aqueous solubility",
+      "Methoxy group at C6/C7 position follows established SAR patterns of successful EGFR inhibitors",
+      "Good balance of lipophilicity and polar surface area for oral bioavailability"
+    ],
+    "reasoning": "This molecule closely resembles approved EGFR tyrosine kinase inhibitors such as gefitinib and erlotinib, featuring a 4-anilinoquinazoline core with methoxy substitution and a primary carboxamide. The diaryl ether with a meta-chlorophenyl group is reminiscent of structural elements in lapatinib. The compound has favorable drug-like properties (MW ~394, moderate LogP, adequate H-bond donors/acceptors) and a well-precedented scaffold with multiple approved drugs. The primary concern is the chlorophenyl ether which may generate reactive metabolites, and the known class-related toxicity profile of EGFR inhibitors, but these are manageable risks given clinical precedent."
+  },
+  {
+    "name": "Sotorasib",
+    "smiles": "C=CC(=O)N1CCC(CC1)(C)N2C(=O)C3=CC(=C(N=C3N(C2=O)C4=C(C=CC(=C4)F)F)O)C(C)(C)C",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 6,
+    "synthetic_feasibility": 5,
+    "clinical_potential": 7,
+    "overall_score": 6.7,
+    "recommendation": "Caution",
+    "concerns": [
+      "Acrylamide warhead (Michael acceptor) poses potential off-target reactivity and toxicity risk if not selectively targeted",
+      "Relatively high molecular weight (~512 Da), approaching Lipinski violation territory",
+      "Complex multi-ring system with potential metabolic liabilities at the pyrimidine-dione core",
+      "Difluorophenyl group may contribute to lipophilicity concerns (cLogP likely >4)",
+      "Synthetic complexity is moderate-to-high with multiple stereocenters and functional group compatibility challenges"
+    ],
+    "strengths": [
+      "Acrylamide warhead suggests covalent kinase inhibitor design - a validated and clinically successful strategy (e.g., osimertinib, ibrutinib class)",
+      "Piperidine-based scaffold with quaternary carbon provides conformational rigidity and 3D character (Fsp3 favorable)",
+      "Difluorophenyl substitution pattern is common in approved drugs and can improve metabolic stability",
+      "Hydroxypyrimidine-dione core may provide strong target binding through hydrogen bonding",
+      "tert-Butyl group enhances hydrophobic pocket filling and metabolic blocking"
+    ],
+    "reasoning": "This molecule appears to be a rationally designed covalent inhibitor, likely targeting a kinase (e.g., KRAS G12C or EGFR mutant), featuring an acrylamide warhead connected via a piperidine spacer to a hydroxypyrimidinedione pharmacophore with a difluorophenyl group. The covalent mechanism is clinically validated but requires careful selectivity profiling. The molecular weight and lipophilicity are borderline but acceptable for an oncology candidate. Synthetic feasibility is moderate due to the quaternary carbon center and multi-step assembly, but the overall design reflects medicinal chemistry best practices for targeted covalent inhibitors."
+  },
+  {
+    "name": "Palbociclib",
+    "smiles": "CC(=O)C1=C(C=C2CN=C(N=C2N1C3CCCC3)NC4=NC=C(C=C4)N5CCNCC5)C",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 6,
+    "synthetic_feasibility": 6,
+    "clinical_potential": 6,
+    "overall_score": 6.3,
+    "recommendation": "Caution",
+    "concerns": [
+      "Potential hERG liability due to piperazine moiety and basic nitrogen centers",
+      "Multiple aromatic/heteroaromatic rings may contribute to poor solubility",
+      "Guanidine-like amidine linkage (N=C-N=C-N) may have metabolic stability concerns",
+      "Cyclopentyl group on nitrogen may affect CYP metabolism and clearance",
+      "Extended conjugated system with acetyl group could be susceptible to reductive metabolism"
+    ],
+    "strengths": [
+      "Molecular weight likely in acceptable range (~430 Da), within Lipinski guidelines",
+      "Contains a piperazine group providing good water solubility handle and salt-forming capability",
+      "Pyrimidine-aminopyridine scaffold is a well-validated kinase inhibitor pharmacophore",
+      "Moderate number of hydrogen bond donors and acceptors consistent with oral bioavailability",
+      "Structural similarity to known kinase inhibitors (e.g., resembles CDK/PI3K inhibitor scaffolds)"
+    ],
+    "reasoning": "This molecule features a fused bicyclic core with a pyrimidine-aminopyridine motif characteristic of kinase inhibitors, decorated with a piperazine for solubility and a cyclopentyl group for lipophilicity tuning. While the overall drug-likeness profile is reasonable with MW and HBD/HBA within Lipinski limits, there are concerns about hERG channel interaction from the basic piperazine, potential metabolic liabilities from the acetyl group and cyclopentyl moiety, and the synthetic complexity of the fused heterocyclic core. The compound warrants further profiling but carries moderate risk."
+  },
+  {
+    "name": "Elexacaftor",
+    "smiles": "CC1=C(N=C(S1)NC(=O)C2=C(C=CC(=C2)OC(F)F)F)C3=CC(=CC=C3)C(=O)O",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 6,
+    "clinical_potential": 5,
+    "overall_score": 5.5,
+    "recommendation": "Caution",
+    "concerns": [
+      "Thiazole-amide linkage may be metabolically labile",
+      "Difluoromethoxy (-OCF2H) group could potentially release formaldehyde upon metabolic cleavage, raising toxicity concerns",
+      "Fluorinated aromatic ring combined with thiazole may increase CYP inhibition risk",
+      "Carboxylic acid on the pendant phenyl ring may limit cell permeability and CNS penetration",
+      "Multiple aromatic rings increase planarity and potential for hERG channel binding"
+    ],
+    "strengths": [
+      "Molecular weight likely in acceptable range (~430 Da), within Lipinski guidelines",
+      "Good balance of hydrogen bond donors and acceptors",
+      "Carboxylic acid provides a handle for salt formation and improves aqueous solubility",
+      "Aminothiazole scaffold is a well-precedented pharmacophore in medicinal chemistry",
+      "Difluoromethoxy group provides metabolic stability at that position compared to methoxy",
+      "Structural complexity is moderate, suggesting reasonable SAR exploration potential"
+    ],
+    "reasoning": "This molecule features an aminothiazole core bearing a meta-benzoic acid substituent and an ortho-fluoro, meta-difluoromethoxy benzoyl amide. While it falls within drug-like chemical space (MW ~430, appropriate logP range, acceptable HBD/HBA count), there are notable ADMET concerns. The difluoromethoxy group, while metabolically more stable than methoxy, can generate reactive metabolites. The high aromatic ring count (3 rings plus thiazole) raises concerns about CYP inhibition and hERG liability. The carboxylic acid is beneficial for solubility but may limit oral absorption. Overall, the molecule warrants further profiling but carries moderate risk."
+  },
+  {
+    "name": "Entrectinib",
+    "smiles": "CC1=CC=C(C=C1)C(=O)NC2=CC=C(C=C2)N3CCN(CC3)CC4=CC=C5N=CN=C5C4",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 5,
+    "overall_score": 5.6,
+    "recommendation": "Caution",
+    "concerns": [
+      "Contains a piperazine ring which may be associated with hERG channel inhibition and cardiotoxicity risk",
+      "Quinazoline moiety connected via benzylic CH2 to piperazine creates a highly basic center prone to lysosomal trapping and phospholipidosis",
+      "Multiple aromatic rings (4 rings) increase planarity and potential for CYP inhibition and off-target promiscuity",
+      "Amide bond connecting two aromatic rings creates a relatively flat, extended topology that may cause solubility issues",
+      "MW ~437 Da is acceptable but approaching upper Lipinski limits with moderate lipophilicity concerns"
+    ],
+    "strengths": [
+      "Molecular weight within Lipinski rule of 5 compliance (~437 Da)",
+      "Contains hydrogen bond donors (amide NH) and acceptors (quinazoline N, amide C=O, piperazine N) in reasonable numbers",
+      "Piperazine provides water solubility as a salt form and good oral bioavailability potential",
+      "Modular structure amenable to SAR optimization at multiple positions (tolyl, aniline, quinazoline)",
+      "Straightforward synthetic route via amide coupling and reductive amination"
+    ],
+    "reasoning": "This molecule features a toluamide linked to an aniline bearing a piperazine substituted with a quinazolinylmethyl group. While it has reasonable drug-like properties and is synthetically accessible, the combination of a basic piperazine with multiple flat aromatic systems raises significant ADMET concerns including hERG liability, CYP inhibition, and potential off-target pharmacology. The scaffold resembles kinase inhibitor pharmacophores but lacks clear selectivity-driving features, suggesting moderate clinical risk without further optimization."
+  },
+  {
+    "name": "Tazemetostat",
+    "smiles": "CCN(C1CCOCC1)C2=C(C=C(C(=C2)C)C3=CC=C(C=C3)OCCN4CCCC4)C(=O)NCC",
+    "category": "A_approved",
+    "drug_likeness": 6,
+    "admet_safety": 5,
+    "synthetic_feasibility": 6,
+    "clinical_potential": 5,
+    "overall_score": 5.3,
+    "recommendation": "Caution",
+    "concerns": [
+      "High molecular weight approaching or exceeding 500 Da, borderline Lipinski violation",
+      "Contains two basic nitrogen centers (pyrrolidine and tertiary amine on tetrahydropyran) which may lead to hERG channel liability",
+      "Multiple rotatable bonds reduce conformational rigidity and may impair oral bioavailability",
+      "Aniline-type nitrogen (dialkylaminobenzene) may be susceptible to oxidative metabolism generating reactive intermediates",
+      "High lipophilicity (cLogP likely >4) combined with multiple basic centers could lead to phospholipidosis or lysosomal trapping",
+      "The ethylamine amide (C(=O)NCC) is a relatively weak pharmacophoric element with potential metabolic vulnerability at the terminal ethyl"
+    ],
+    "strengths": [
+      "Contains an amide bond providing hydrogen bond donor/acceptor capability for target engagement",
+      "Tetrahydropyran ring provides good metabolic stability compared to a piperidine and reduces basicity",
+      "Biaryl-type connectivity offers a rigid core scaffold suitable for receptor binding",
+      "Modular structure amenable to SAR exploration around multiple substitution points",
+      "Pyrrolidine-O-ethyl linker is a common solubilizing motif in kinase inhibitors and other drug classes"
+    ],
+    "reasoning": "This molecule has a complex, multi-pharmacophore structure with reasonable drug-like features but several concerning elements. The presence of two basic amines raises significant hERG liability concerns, and the dialkylaminoaromatic system poses metabolic risks through potential bioactivation. The molecular weight and lipophilicity are borderline, and while the scaffold is synthetically tractable via standard cross-coupling and amination chemistry, the overall ADMET profile would need careful optimization before advancing. The molecule warrants further profiling but carries meaningful risk."
+  },
+  {
+    "name": "Ruxolitinib",
+    "smiles": "N#CC1=CC=C(C=C1)C2=C(C=CN=C2)C3CC3N4C=CN=C4",
+    "category": "A_approved",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 5,
+    "clinical_potential": 5,
+    "overall_score": 5.4,
+    "recommendation": "Caution",
+    "concerns": [
+      "Nitrile group on aromatic ring raises potential metabolic toxicity concerns (cyanide release, though generally stable on aryl systems)",
+      "Cyclopropane bearing both an aryl group and an imidazole nitrogen creates a strained, stereochemically complex motif - potential metabolic instability",
+      "Imidazole group is a known CYP inhibitor (particularly CYP3A4), raising drug-drug interaction concerns",
+      "Multiple aromatic/heteroaromatic rings may lead to poor aqueous solubility",
+      "Chiral centers on the cyclopropane ring require stereoselective synthesis and could complicate development"
+    ],
+    "strengths": [
+      "Molecular weight is moderate (~300 Da range), well within Lipinski guidelines",
+      "Good balance of hydrogen bond donors and acceptors",
+      "Pyridine ring provides a basic nitrogen that can aid salt formation and solubility tuning",
+      "Compact, rigid scaffold with defined 3D character from cyclopropane - good for target selectivity",
+      "Low rotatable bond count suggests favorable entropic binding profile"
+    ],
+    "reasoning": "This molecule features a cyanophenyl-pyridine biaryl core with a cyclopropyl-imidazole substituent, resembling kinase inhibitor or GPCR ligand scaffolds. While the physicochemical properties are drug-like (MW ~300, moderate logP, few rotatable bonds), the imidazole moiety poses significant CYP inhibition risk, and the trans-substituted cyclopropane introduces synthetic complexity requiring stereocontrol. The overall profile is promising but requires careful ADMET profiling, particularly around CYP inhibition and metabolic stability, before advancement."
+  },
+  {
+    "name": "BEN-2293",
+    "smiles": "CC1=CC(=CC(=C1NC(=O)C2=CC(=C(C=C2)C3=CN=C4C=CC=CN34)OC)C)N5CCC(CC5)N6CCOCC6",
+    "category": "B_clinical_failure",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 6,
+    "clinical_potential": 6,
+    "overall_score": 6.0,
+    "recommendation": "Caution",
+    "concerns": [
+      "Molecular weight likely exceeds 500 Da (~540), pushing beyond Lipinski's Rule of 5",
+      "Imidazo[1,2-a]pyridine (or similar N-containing bicyclic heteroaromatic) may pose hERG liability due to basic nitrogen and planar aromatic system",
+      "Multiple basic nitrogen centers (piperidine, morpholine, imidazopyridine) could lead to high volume of distribution and potential phospholipidosis",
+      "Potential CYP3A4 inhibition due to the presence of multiple nitrogen-containing heterocycles",
+      "Relatively high topological polar surface area and rotatable bond count may limit oral bioavailability"
+    ],
+    "strengths": [
+      "Well-precedented pharmacophore: diaryl amide core seen in many kinase inhibitors and similar targeted therapies",
+      "Morpholine-piperidine solubilizing group provides good aqueous solubility and is a common drug-like motif",
+      "Methoxy and methyl substituents provide metabolic handles for optimization",
+      "Structural similarity to approved kinase inhibitors (e.g., resembles motifs in ponatinib/imatinib class)",
+      "Good balance of lipophilic and hydrophilic regions suggesting reasonable permeability"
+    ],
+    "reasoning": "This molecule resembles a kinase inhibitor with a biaryl amide core, an imidazopyridine warhead, and a piperidine-morpholine solubilizing tail. While the overall architecture is drug-like and follows established medicinal chemistry design principles, the molecular weight is borderline high (~540 Da), and the multiple basic centers raise concerns about hERG channel inhibition, CYP interactions, and potential off-target toxicity. Synthetic feasibility is moderate, requiring cross-coupling chemistry for the biaryl bond and standard amide coupling. The molecule warrants further profiling but carries enough risk factors to proceed with caution."
+  },
+  {
+    "name": "Rofecoxib (Vioxx)",
+    "smiles": "CS(=O)(=O)C1=CC=C(C=C1)C2=C(C(=O)OC2)C3=CC=CC=C3",
+    "category": "B_clinical_failure",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Contains a butenolide (\u03b1,\u03b2-unsaturated lactone) moiety that may act as a Michael acceptor, posing reactivity/toxicity risks",
+      "Structural similarity to rofecoxib (Vioxx) - methylsulfonyl phenyl group is a hallmark of COX-2 inhibitors associated with cardiovascular risks",
+      "Flat, highly conjugated aromatic system may lead to poor aqueous solubility",
+      "Potential for CYP-mediated metabolism of the sulfone group and aromatic rings",
+      "No hydrogen bond donors, limited target selectivity features"
+    ],
+    "strengths": [
+      "Molecular weight (~328 Da) well within Lipinski guidelines",
+      "Good synthetic accessibility - can be assembled via Knoevenagel or cross-coupling chemistry",
+      "Methylsulfonyl group provides metabolic stability compared to thiol/sulfide analogs",
+      "Compact structure with reasonable LogP (~2.5-3.5) suitable for oral absorption",
+      "Well-defined pharmacophore if targeting COX-2 or related inflammatory targets"
+    ],
+    "reasoning": "This molecule is essentially a butenolide analog closely related to rofecoxib (Vioxx), bearing the characteristic 4-(methylsulfonyl)phenyl group and a phenyl substituent on a \u03b3-butenolide ring. While it has favorable drug-like physicochemical properties and is synthetically accessible, the strong structural resemblance to rofecoxib raises serious cardiovascular safety concerns that led to that drug's withdrawal. Additionally, the \u03b1,\u03b2-unsaturated lactone could serve as a Michael acceptor, raising potential reactivity and off-target toxicity issues. Clinical advancement would require compelling differentiation from known COX-2 inhibitor liabilities."
+  },
+  {
+    "name": "Troglitazone",
+    "smiles": "CC1=C(C2=C(CC(OC2=O)(C)C)C(=C1O)C)CCOC3=CC=C(C=C3)CC4SC(=O)NC4=O",
+    "category": "B_clinical_failure",
+    "drug_likeness": 6,
+    "admet_safety": 4,
+    "synthetic_feasibility": 5,
+    "clinical_potential": 4,
+    "overall_score": 4.5,
+    "recommendation": "Caution",
+    "concerns": [
+      "Contains a thiazolidinedione (TZD) headgroup associated with known PPAR-gamma-related toxicities (edema, cardiac risk, hepatotoxicity)",
+      "High molecular weight (~485 Da) approaching Lipinski upper limit",
+      "Multiple lipophilic fragments (trimethylchromanone, aromatic ether linker) likely yield high logP (>5), raising solubility and CYP metabolism concerns",
+      "Ether linker with benzylic methylene adjacent to thiazolidinedione may be metabolically labile (oxidative dealkylation)",
+      "The chromanone/chromene portion with gem-dimethyl and phenolic OH may undergo glucuronidation leading to rapid clearance",
+      "Complex multi-component structure with flexible linker may have poor oral bioavailability"
+    ],
+    "strengths": [
+      "Thiazolidinedione is a validated pharmacophore for PPAR-gamma modulation (antidiabetic activity)",
+      "Chromanone moiety resembles vitamin E/tocopherol derivatives with potential antioxidant properties",
+      "Contains hydrogen bond donors and acceptors in reasonable range for oral bioavailability",
+      "No obviously reactive or genotoxic functional groups beyond the TZD warhead"
+    ],
+    "reasoning": "This molecule combines a thiazolidinedione pharmacophore with a tocopherol-like chromanone fragment via an aryl ether linker. While the TZD class has proven antidiabetic efficacy, the well-documented class-related safety concerns (rosiglitazone cardiovascular risk, troglitazone hepatotoxicity) significantly dampen enthusiasm. The high lipophilicity from the chromanone and aromatic portions, combined with metabolically vulnerable sites, suggest potential ADMET challenges. The moderate synthetic complexity and significant safety liabilities of the TZD class make this a cautionary candidate requiring substantial optimization before advancement."
+  },
+  {
+    "name": "Ximelagatran",
+    "smiles": "CC(C)CC(NC(=O)C(CC1=CC=CC=C1)NC(=O)C2=NC=CC=C2N)C(=O)OCC",
+    "category": "B_clinical_failure",
+    "drug_likeness": 6,
+    "admet_safety": 5,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 4,
+    "overall_score": 4.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "Ethyl ester prodrug moiety is susceptible to rapid hydrolysis by esterases, leading to poor metabolic stability",
+      "Free aromatic amine (2-aminopyridine) raises concerns for potential mutagenicity/genotoxicity via metabolic activation",
+      "Peptide-like backbone with two amide bonds suggests potential for poor oral bioavailability due to proteolytic degradation",
+      "No clear defined pharmacological target or optimized pharmacophore evident from the structure",
+      "Moderate lipophilicity with multiple rotatable bonds may lead to poor membrane permeability and high clearance"
+    ],
+    "strengths": [
+      "Molecular weight (~424 Da) falls within Lipinski's Rule of Five range",
+      "Contains hydrogen bond donors and acceptors in a reasonable range",
+      "Straightforward peptide-coupling chemistry makes synthesis accessible",
+      "2-Aminopyridine moiety could serve as a useful pharmacophore for target engagement",
+      "Isobutyl and phenyl side chains provide hydrophobic interactions for potential target binding"
+    ],
+    "reasoning": "This molecule resembles a peptidomimetic with a 2-aminopyridinecarbonyl cap, phenylalanine-like core, and leucine-like ethyl ester terminus. The free aromatic amine is a significant safety liability due to genotoxicity risk, and the ethyl ester will be rapidly cleaved in vivo, questioning whether this is the intended active species. The peptidic character raises concerns about oral bioavailability and metabolic stability. Without a clear, validated target and with notable structural liabilities, this compound needs significant optimization before advancement."
+  },
+  {
+    "name": "Lorcainide",
+    "smiles": "ClC1=CC=C(C=C1)OCC(=O)NC2CCCCN2CC3=CC=CC=C3",
+    "category": "B_clinical_failure",
+    "drug_likeness": 6,
+    "admet_safety": 4,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 4,
+    "overall_score": 4.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "Contains a chlorophenyl ether moiety which may generate reactive metabolites via CYP-mediated dechlorination",
+      "Piperidine nitrogen bearing a benzyl group creates a basic center prone to hERG channel binding and potential cardiotoxicity",
+      "Alpha-haloaryl ether linked amide may be susceptible to hydrolytic or metabolic cleavage, leading to short half-life",
+      "Two aromatic rings with lipophilic character and a basic amine suggest high volume of distribution and potential CNS off-target effects",
+      "No clear pharmacophore targeting a well-validated therapeutic mechanism; appears to be a generic scaffold without optimization"
+    ],
+    "strengths": [
+      "Molecular weight (~358 Da) is well within Lipinski rule of five limits",
+      "Contains both hydrogen bond donor (amide NH) and acceptor groups, supporting reasonable solubility",
+      "Straightforward 2-3 step synthesis: alkylation of 4-chlorophenol with chloroacetyl chloride derivative, followed by amide coupling and reductive amination",
+      "Piperidine core provides a rigid, drug-like scaffold with good oral bioavailability precedent"
+    ],
+    "reasoning": "This molecule has acceptable physicochemical properties (MW, HBD/HBA, rotatable bonds) for oral drug-likeness, but raises significant ADMET concerns. The N-benzylpiperidine motif is a well-known hERG liability flag, and the chlorophenoxy group poses metabolic and toxicity risks. Without a defined target or demonstrated selectivity, the clinical potential is limited. The compound would need substantial optimization around the basic nitrogen and aryl chloride before advancement."
+  },
+  {
+    "name": "Encainide",
+    "smiles": "CCOC1=CC2=C(C=C1)NC(=C2)C(=O)C3CCCCN3CC4=CC=CC=C4",
+    "category": "B_clinical_failure",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 5,
+    "overall_score": 5.6,
+    "recommendation": "Caution",
+    "concerns": [
+      "N-benzylpiperidine moiety raises CNS safety and hERG liability concerns",
+      "Basic tertiary amine may lead to phospholipidosis risk",
+      "Indole-ketone system could be metabolically labile (CYP-mediated oxidation)",
+      "Potential for CYP2D6 inhibition due to basic amine proximal to aromatic ring",
+      "No clear target or therapeutic rationale discernible from structure alone",
+      "Aminoketone may undergo enolization or racemization if chiral center is relevant"
+    ],
+    "strengths": [
+      "Molecular weight (~362) well within Lipinski guidelines",
+      "Reasonable LogP estimate (~3.5-4), acceptable for oral absorption",
+      "Contains only 2 hydrogen bond donors and ~4 acceptors, favorable for permeability",
+      "Low rotatable bond count supports good oral bioavailability",
+      "Straightforward synthesis via Mannich-type or Fischer indole chemistry",
+      "Indole scaffold is a privileged structure in medicinal chemistry"
+    ],
+    "reasoning": "This molecule features an ethoxyindole connected via a ketone linker to an N-benzylpiperidine. While it satisfies Lipinski's rules and has a privileged indole scaffold, the N-benzylpiperidine raises significant ADMET concerns including hERG channel inhibition, CYP2D6 interactions, and potential CNS off-target effects. The aminoketone functionality may also present metabolic instability. Without a clear therapeutic target or selectivity profile, the clinical potential is moderate at best, warranting cautious optimization rather than direct advancement."
+  },
+  {
+    "name": "EXS-21546",
+    "smiles": "CC1=NN=C(N1C2=CC(=CC=C2)C(F)(F)F)C3=CC=C(C=C3)C#N",
+    "category": "B_clinical_failure",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 5,
+    "overall_score": 5.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "Nitrile group on aromatic ring may pose metabolic liability or potential toxicity concerns",
+      "1,3,4-trisubstituted pyrazole with N-aryl bond may have CYP inhibition risk",
+      "Trifluoromethylphenyl group increases lipophilicity, potentially leading to off-target effects",
+      "Relatively flat, aromatic-rich structure may lead to hERG channel binding",
+      "Low aqueous solubility expected due to high aromatic character and lipophilicity (cLogP likely ~3.5-4.0)"
+    ],
+    "strengths": [
+      "Molecular weight (~342 Da) well within Lipinski rule of five",
+      "Low hydrogen bond donor/acceptor count favorable for oral absorption",
+      "Pyrazole core is a well-established pharmacophore in medicinal chemistry (e.g., celecoxib analog)",
+      "Straightforward synthesis via condensation/cyclization chemistry",
+      "Compact structure with good ligand efficiency potential",
+      "CF3 group provides metabolic stability at the meta position"
+    ],
+    "reasoning": "This molecule is a 1,3-disubstituted pyrazole bearing a meta-trifluoromethylphenyl on nitrogen and a para-cyanophenyl at C3, with a methyl at C5. While it has good drug-like physicochemical properties (MW, HBD/HBA, reasonable LogP) and is synthetically accessible, there are moderate ADMET concerns including potential CYP inhibition from the planar aromatic system, possible hERG liability, and the nitrile group which, while common in drugs (e.g., cimetidine, letrozole), warrants careful evaluation. The molecule lacks a clear differentiated mechanism or novelty indicator, placing it in a cautionary zone for clinical advancement without further optimization."
+  },
+  {
+    "name": "DSP-1181",
+    "smiles": "CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)(=O)N)C(F)(F)F",
+    "category": "B_clinical_failure",
+    "drug_likeness": 8,
+    "admet_safety": 7,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 8,
+    "overall_score": 7.7,
+    "recommendation": "Advance",
+    "concerns": [
+      "CF3 group may contribute to metabolic stability but could generate reactive metabolites under certain conditions",
+      "Sulfonamide group may cause hypersensitivity reactions in susceptible individuals",
+      "Diaryl pyrazole scaffold has been associated with COX-2 selectivity concerns (Celecoxib analog) and potential cardiovascular risks"
+    ],
+    "strengths": [
+      "This is essentially Celecoxib - an FDA-approved drug with proven clinical efficacy as a COX-2 selective inhibitor",
+      "Excellent drug-likeness: MW ~381, good logP range, complies with Lipinski's Rule of Five",
+      "Well-characterized pharmacology with established safety profile from extensive clinical use",
+      "Sulfonamide provides good aqueous solubility and serves as a key pharmacophore for COX-2 selectivity",
+      "Straightforward synthesis via 1,3-dipolar cycloaddition or condensation chemistry for pyrazole ring formation",
+      "Good oral bioavailability demonstrated clinically"
+    ],
+    "reasoning": "This molecule is Celecoxib (Celebrex), a well-known FDA-approved selective COX-2 inhibitor featuring a 1,5-diarylpyrazole core with a trifluoromethyl group and a para-sulfonamide on one phenyl ring. It has an excellent track record as an oral anti-inflammatory drug with well-characterized PK/PD properties. The molecule satisfies all Lipinski criteria, has proven synthetic routes, and demonstrated clinical success, though cardiovascular safety concerns associated with the COX-2 class remain a consideration."
+  },
+  {
+    "name": "Torcetrapib",
+    "smiles": "CC(C)C1=CC(=CC(=C1)C(=O)N2CC(CC(C2)OC(=O)NC3=CC=CC=C3)CC(F)(F)F)C(C)C",
+    "category": "B_clinical_failure",
+    "drug_likeness": 6,
+    "admet_safety": 5,
+    "synthetic_feasibility": 6,
+    "clinical_potential": 5,
+    "overall_score": 5.3,
+    "recommendation": "Caution",
+    "concerns": [
+      "High lipophilicity due to two isopropyl groups on the aromatic ring combined with a trifluoromethyl group - likely cLogP > 5",
+      "Carbamate linkage (phenyl carbamate) may be metabolically labile, potentially releasing aniline which raises toxicity concerns",
+      "Molecular weight likely around 490-510, approaching Lipinski limit",
+      "Low aqueous solubility expected given high lipophilicity and multiple hydrophobic substituents",
+      "Piperidine scaffold with multiple stereocenters may complicate development if racemic"
+    ],
+    "strengths": [
+      "Contains a well-defined piperidine scaffold commonly seen in drug molecules",
+      "Amide bond connecting aromatic ring to piperidine provides metabolic stability at that position",
+      "Trifluoromethyl group can enhance metabolic stability and membrane permeability",
+      "Reasonable number of hydrogen bond donors and acceptors",
+      "Rigid aromatic and piperidine framework may provide good target selectivity"
+    ],
+    "reasoning": "This molecule features a 3,5-diisopropylbenzoyl group connected to a substituted piperidine bearing a trifluoromethylethyl chain and a phenyl carbamate. While the piperidine core is a privileged scaffold in medicinal chemistry, the overall high lipophilicity (estimated cLogP ~5-6) raises concerns about solubility, CYP inhibition, and off-target effects. The phenyl carbamate moiety is a metabolic liability that could release aniline, a known toxicophore. The molecule has drug-like features but needs optimization to reduce lipophilicity and address the carbamate stability concern before advancing."
+  },
+  {
+    "name": "Semagacestat",
+    "smiles": "CC(C)CC(C(=O)NC(CC1=CC=CC=C1)C(=O)N2CC(CC2=O)O)NC(=O)C",
+    "category": "B_clinical_failure",
+    "drug_likeness": 7,
+    "admet_safety": 6,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 5,
+    "overall_score": 5.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "Peptidic backbone with multiple amide bonds suggests potential for rapid proteolytic degradation and poor oral bioavailability",
+      "Contains a hydroxypyrrolidinone motif that may be metabolically labile",
+      "Multiple chiral centers (at least 3) requiring stereoselective synthesis and raising stereochemical complexity",
+      "Peptide-like character may lead to poor membrane permeability",
+      "No clear novel pharmacophore - resembles generic peptidomimetic protease inhibitor without optimized features"
+    ],
+    "strengths": [
+      "Molecular weight (~403 Da) falls within Lipinski's Rule of Five",
+      "Reasonable balance of hydrophilic and lipophilic groups (estimated cLogP ~1.5-2.5)",
+      "Contains a constrained pyrrolidinone ring that partially rigidifies the peptide backbone, improving over linear peptides",
+      "Phenylalanine-like side chain provides hydrophobic interactions common in protease inhibitor pharmacophores",
+      "Hydrogen bond donors and acceptors within acceptable Lipinski limits"
+    ],
+    "reasoning": "This molecule is a tripeptide-like structure resembling a protease inhibitor (similar to early HIV or HCV protease inhibitor scaffolds) with an N-acetyl-leucine-phenylalanine backbone connected to a 3-hydroxypyrrolidin-2-one. While it satisfies basic drug-likeness criteria (MW, HBD/HBA, logP), its peptidic nature raises significant concerns about metabolic stability, oral bioavailability, and proteolytic degradation. The compound appears to be an early-stage peptidomimetic that would likely require substantial optimization of its ADMET profile before advancing, and without a defined potent target engagement profile, clinical potential remains moderate at best."
+  },
+  {
+    "name": "Evacetrapib",
+    "smiles": "CC1=CC(=CC(=C1)C(F)(F)F)NC(=O)C2CC2C3=CC(=C(C=C3)F)F",
+    "category": "B_clinical_failure",
+    "drug_likeness": 7,
+    "admet_safety": 6,
+    "synthetic_feasibility": 7,
+    "clinical_potential": 6,
+    "overall_score": 6.3,
+    "recommendation": "Caution",
+    "concerns": [
+      "CF3 group on aniline ring may increase lipophilicity and potential for metabolic issues",
+      "Difluorophenyl and trifluoromethyl groups together contribute significant halogen loading, potentially increasing off-target toxicity risk",
+      "Aniline nitrogen as amide acceptor - potential for reactive metabolite formation via oxidation of the aromatic amine system",
+      "Moderate lipophilicity (estimated cLogP ~3.5-4.0) may lead to solubility challenges"
+    ],
+    "strengths": [
+      "Molecular weight (~351 Da) well within Lipinski drug-like space",
+      "Cyclopropane carboxamide is a well-precedented, metabolically stable motif in drug design",
+      "Low hydrogen bond donor/acceptor count favorable for oral absorption",
+      "Rigid cyclopropane linker provides conformational constraint, potentially improving target selectivity",
+      "No obvious PAINS or frequent hitter structural alerts",
+      "Good balance of sp3 character from cyclopropane improving developability"
+    ],
+    "reasoning": "This molecule features a cyclopropane carboxamide linking a 3,4-difluorophenyl group to a 3-methyl-5-(trifluoromethyl)aniline. It has good drug-like properties with MW ~351, reasonable HBD/HBA counts, and appropriate molecular complexity. The cyclopropane motif is a well-validated medicinal chemistry building block. However, the high fluorine content (5 fluorines) raises concerns about lipophilicity-driven toxicity and potential CYP inhibition. The molecule lacks a clear ionizable group which may limit solubility. Overall, it is a reasonable lead compound but would benefit from optimization to address lipophilicity and metabolic stability concerns before advancing."
+  },
+  {
+    "name": "REC-994 (Tempol)",
+    "smiles": "CC1(CC(CC(C1)(C)O)O)N=[O]",
+    "category": "B_clinical_failure",
+    "drug_likeness": 4,
+    "admet_safety": 3,
+    "synthetic_feasibility": 6,
+    "clinical_potential": 3,
+    "overall_score": 3.5,
+    "recommendation": "Reject",
+    "concerns": [
+      "Contains a nitroso group (N=O) which is a known reactive and potentially toxic/mutagenic functional group",
+      "Nitroso compounds are associated with genotoxicity and carcinogenicity concerns",
+      "Very low molecular weight (~173 Da) - may lack sufficient complexity for selective target engagement",
+      "No clear pharmacophore for a defined therapeutic target",
+      "Nitroso group is metabolically labile and can form reactive intermediates"
+    ],
+    "strengths": [
+      "Good aqueous solubility expected due to hydroxyl groups and small size",
+      "Low molecular weight ensures good oral absorption potential",
+      "Cyclohexane scaffold provides reasonable metabolic stability of the core",
+      "Simple structure amenable to SAR exploration if the nitroso group is replaced"
+    ],
+    "reasoning": "This molecule is a 1,3,5-trisubstituted cyclohexane bearing two hydroxyl groups, two gem-dimethyl groups, and a nitroso (N=O) functional group. The nitroso moiety is a major red flag in drug development due to well-documented genotoxicity, mutagenicity, and reactivity concerns \u2014 nitroso compounds are flagged as structural alerts in virtually all toxicity prediction frameworks. While the molecule has favorable physicochemical properties (low MW, good solubility, Lipinski-compliant), the presence of the nitroso group makes it unsuitable as a drug candidate without significant structural modification. The molecule lacks a clear therapeutic rationale based on its structure alone."
+  },
+  {
+    "name": "Decoy-1 (ZINC000003986735)",
+    "smiles": "CC1=CC=C(C=C1)NC(=O)C2=CC=C(C=C2)OC",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 6,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 3,
+    "overall_score": 4.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "Very simple structure with low molecular weight (~241 Da) - likely lacks sufficient potency and selectivity for a specific target",
+      "Aniline-derived amide may pose metabolic concerns (potential for hydrolysis releasing aromatic amine, which could be genotoxic)",
+      "No defined biological target or pharmacophore beyond a generic amide linker between two substituted phenyl rings",
+      "Flat, planar biaryl amide structure may have poor solubility due to crystal packing",
+      "Lacks structural complexity and sp3 character (low Fsp3), which correlates with higher clinical attrition rates"
+    ],
+    "strengths": [
+      "Fully compliant with Lipinski's Rule of Five (MW ~241, 1 HBD, 3 HBA, low LogP ~3)",
+      "Excellent synthetic feasibility - straightforward amide coupling between 4-methoxybenzoic acid and p-toluidine",
+      "Good molecular weight range leaving room for optimization and elaboration",
+      "No reactive functional groups or obvious structural alerts beyond the aniline concern",
+      "Low rotatable bond count suggests reasonable oral bioavailability"
+    ],
+    "reasoning": "This molecule is a simple 4-methoxybenzanilide derivative with a para-methyl substituent on the aniline ring. While it has excellent drug-like physicochemical properties and is trivially synthesizable, it is essentially a fragment-level compound with no clear pharmacophore for a validated drug target. The lack of structural complexity and specificity features makes it unlikely to have sufficient potency or selectivity to advance as a clinical candidate. It could serve as a starting point for optimization but not as a drug candidate itself."
+  },
+  {
+    "name": "Decoy-2 (Phenacetin analog)",
+    "smiles": "CCOC1=CC=C(C=C1)NC(=O)CC2=CC=CC=C2",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 3,
+    "overall_score": 4.5,
+    "recommendation": "Caution",
+    "concerns": [
+      "Simple phenylacetamide scaffold with no clear pharmacological target or novelty",
+      "Aniline-derived amide may release potentially toxic 4-ethoxyaniline (phenetidine) upon hydrolysis \u2014 phenetidine is a known methemoglobin inducer",
+      "Structural similarity to phenacetin, a withdrawn drug due to nephrotoxicity and carcinogenicity concerns",
+      "Lack of structural complexity or additional pharmacophoric features to confer target selectivity",
+      "No hydrogen bond donors/acceptors beyond the amide \u2014 limited target engagement potential"
+    ],
+    "strengths": [
+      "Excellent Lipinski compliance: MW ~255, low HBD/HBA count, moderate logP",
+      "Very straightforward synthesis via amide coupling of phenylacetyl chloride with 4-ethoxyaniline",
+      "Good oral bioavailability predicted based on physicochemical properties",
+      "Low molecular weight leaves room for structural optimization"
+    ],
+    "reasoning": "This molecule is essentially a phenylacetamide of p-phenetidine, closely related to the withdrawn analgesic phenacetin. While it has excellent drug-like physicochemical properties and is trivially synthesized, the structural resemblance to phenacetin raises serious ADMET red flags including methemoglobinemia risk and potential nephrotoxicity. The molecule lacks structural complexity or novelty to suggest a differentiated mechanism of action, making clinical success unlikely without significant optimization."
+  },
+  {
+    "name": "Decoy-3 (Biphenyl sulfonamide)",
+    "smiles": "CC1=CC=C(C=C1)C2=CC=C(C=C2)S(=O)(=O)NC",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Biphenyl core is highly planar and lipophilic, raising concerns about off-target activity and poor solubility",
+      "Sulfonamide on a biphenyl scaffold resembles known COX-2 inhibitors (e.g., celecoxib class) but lacks specificity-conferring substituents",
+      "Limited hydrogen bond donors/acceptors may reduce aqueous solubility",
+      "Flat aromatic system may lead to CYP inhibition and hERG channel binding",
+      "No clear differentiated pharmacological target or mechanism \u2014 appears to be a simple fragment rather than an optimized lead"
+    ],
+    "strengths": [
+      "Molecular weight (~261 Da) is low, leaving room for optimization within Lipinski space",
+      "N-methyl sulfonamide is a well-tolerated functional group in drugs",
+      "Straightforward Suzuki coupling synthesis from commercially available building blocks",
+      "Good ligand efficiency potential if a target is identified",
+      "Low molecular complexity allows for rapid SAR exploration"
+    ],
+    "reasoning": "This molecule is a 4-methyl-4'-(N-methylsulfonamido)biphenyl \u2014 a simple, low-MW biphenyl sulfonamide. While it has favorable physicochemical properties and excellent synthetic accessibility, it lacks the structural complexity and specificity features needed for a viable drug candidate. The flat biphenyl core raises ADMET concerns (CYP inhibition, hERG liability, potential phototoxicity), and without a defined target or pharmacophore optimization, clinical potential is limited. It is best viewed as an early-stage fragment or hit requiring significant optimization rather than a drug candidate ready for advancement."
+  },
+  {
+    "name": "Decoy-4 (Benzimidazole carboxamide)",
+    "smiles": "C1=CC=C2C(=C1)NC(=N2)C(=O)NC3=CC=C(C=C3)F",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 8,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Benzimidazole-amide scaffold may have limited metabolic stability due to potential oxidative metabolism on the aromatic rings",
+      "Planar, extended aromatic system raises concerns about potential hERG channel inhibition",
+      "The acyl-aminobenzimidazole motif could be susceptible to hydrolysis or amidase cleavage in vivo",
+      "Relatively low molecular complexity and lack of sp3 character (low Fsp3) may lead to poor solubility and crystal packing issues",
+      "No clear validated target or mechanism \u2014 appears to be a simple fragment-like screening hit rather than an optimized lead"
+    ],
+    "strengths": [
+      "Molecular weight (~255 Da) is well within drug-like space with significant room for optimization",
+      "Complies with Lipinski's Rule of Five \u2014 appropriate HBD/HBA count, low MW, likely good logP",
+      "Fluorine substituent on the aniline ring can improve metabolic stability and membrane permeability",
+      "Benzimidazole is a privileged scaffold found in many marketed drugs (e.g., omeprazole class, telmisartan)",
+      "Straightforward two-step synthesis from commercially available starting materials"
+    ],
+    "reasoning": "This molecule is a 2-benzimidazole carboxamide bearing a 4-fluoroaniline group. While it has excellent drug-like physicochemical properties and is synthetically accessible, it appears to be an early-stage fragment or hit compound lacking optimization. The flat aromatic architecture raises ADMET concerns including potential hERG liability and poor aqueous solubility. Without evidence of potent target engagement or selectivity, clinical potential remains modest, warranting further optimization before advancement."
+  },
+  {
+    "name": "Decoy-5 (Pyridine amide)",
+    "smiles": "CC(C)NC(=O)C1=CC=CN=C1",
+    "category": "C_decoy",
+    "drug_likeness": 4,
+    "admet_safety": 6,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 2,
+    "overall_score": 3.5,
+    "recommendation": "Reject",
+    "concerns": [
+      "Extremely low molecular weight (~164 Da) - likely insufficient for meaningful target engagement",
+      "Very simple structure with minimal pharmacophoric features for selective binding",
+      "Lacks sufficient complexity to achieve potent and selective biological activity",
+      "High likelihood of promiscuous or weak binding to any therapeutic target",
+      "More resembles a fragment or building block than a drug candidate"
+    ],
+    "strengths": [
+      "Excellent synthetic feasibility - simple amide coupling of nicotinic acid with isopropylamine",
+      "Good aqueous solubility expected",
+      "Low lipophilicity reduces risk of CYP inhibition and hERG liability",
+      "Follows Lipinski's rules (though too minimal)",
+      "No obvious reactive or toxic functional groups"
+    ],
+    "reasoning": "This molecule is N-isopropylnicotinamide, an extremely simple pyridine carboxamide derivative. While it has favorable physicochemical properties and is trivially synthesized, it is far too small and simple to serve as a viable drug candidate. It lacks the structural complexity needed for potent and selective target engagement, and would be better classified as a fragment-based screening hit or synthetic intermediate rather than a clinical candidate."
+  },
+  {
+    "name": "Decoy-6 (Indole-3-acetic acid derivative)",
+    "smiles": "O=C(NCC1=CC=CC=C1)CC2=CNC3=CC=CC=C32",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Indole-acetamide scaffold lacks novelty and defined target specificity",
+      "Flat, highly aromatic structure with two aromatic rings may lead to poor solubility and high plasma protein binding",
+      "Potential for CYP enzyme inhibition due to indole and benzyl moieties",
+      "No clear pharmacophore for a specific validated drug target",
+      "Indole C3-methylene is metabolically labile - potential for reactive metabolite formation via oxidation",
+      "Simple amide bond susceptible to hydrolysis by amidases"
+    ],
+    "strengths": [
+      "Molecular weight (~264 Da) well within Lipinski guidelines",
+      "Appropriate number of hydrogen bond donors (2: NH amide + indole NH) and acceptors (2)",
+      "Low molecular complexity allows straightforward SAR exploration",
+      "Excellent synthetic feasibility - simple amide coupling of indole-3-acetic acid with benzylamine",
+      "Good logP range estimated (~2.5-3.0), reasonable for oral absorption",
+      "cLogP and polar surface area consistent with CNS penetration if needed"
+    ],
+    "reasoning": "This molecule is essentially an amide conjugate of indole-3-acetic acid (a plant hormone/common metabolic byproduct) and benzylamine. While it satisfies Lipinski's rules and is trivially synthesized, it lacks a defined pharmacological target and represents a very simple, non-optimized scaffold. The flat aromatic character raises concerns about selectivity, metabolic stability at the indole position, and potential CYP inhibition. As a starting fragment or hit it could be explored, but it is far from a clinical candidate without significant optimization."
+  },
+  {
+    "name": "Decoy-7 (Quinoline carboxamide)",
+    "smiles": "COC1=CC2=NC=CC(=C2C=C1)C(=O)NC3CCCCC3",
+    "category": "C_decoy",
+    "drug_likeness": 8,
+    "admet_safety": 6,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 5,
+    "overall_score": 6.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Quinoline core may pose hERG channel inhibition risk",
+      "Relatively flat SAR - cyclohexyl group lacks specific target interactions and stereochemical complexity",
+      "No clear defined biological target or mechanism suggested by the scaffold alone",
+      "Potential for CYP450 inhibition due to the quinoline nitrogen acting as a metal-coordinating moiety",
+      "Limited aqueous solubility expected due to lipophilic cyclohexyl and methoxy-quinoline combination"
+    ],
+    "strengths": [
+      "Excellent compliance with Lipinski's Rule of Five (MW ~284, 2 HBD/HBA donors, moderate logP ~3.2)",
+      "Simple amide bond provides metabolic stability and a well-characterized pharmacophore",
+      "Straightforward synthesis via coupling of 4-chloroquinoline-3-carboxylic acid derivative with cyclohexylamine",
+      "Low molecular weight leaves room for structural optimization and lead development",
+      "Methoxy-quinoline is a privileged scaffold found in multiple approved drugs (e.g., quinine derivatives)"
+    ],
+    "reasoning": "This molecule is a 6-methoxyquinoline-4-carboxamide bearing a cyclohexyl group. It has excellent drug-like physicochemical properties and is trivially synthesizable, making it a reasonable early-stage lead. However, the lack of target specificity features, potential hERG and CYP liabilities from the quinoline core, and the non-specific hydrophobic cyclohexyl group limit its clinical potential without further optimization. It is best viewed as a lead compound requiring SAR exploration rather than a clinical candidate."
+  },
+  {
+    "name": "Decoy-8 (Thiophene sulfonamide)",
+    "smiles": "CC1=CC=C(S1)S(=O)(=O)NC2=CC=C(C=C2)OC",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Sulfonamide group linked to thiophene raises potential for hypersensitivity/allergic reactions",
+      "Thiophene ring is a known structural alert for bioactivation via epoxidation leading to reactive metabolites and potential hepatotoxicity",
+      "Relatively simple and flat molecule with limited structural complexity, suggesting low target selectivity",
+      "No clear pharmacophore for a well-defined therapeutic target beyond generic sulfonamide activity",
+      "Aniline-type nitrogen (aromatic amine connected via sulfonamide) may undergo metabolic activation"
+    ],
+    "strengths": [
+      "Molecular weight (~283 Da) well within Lipinski drug-like space",
+      "Good balance of lipophilicity with methoxy and sulfonamide groups providing polarity",
+      "Straightforward two-step synthesis via sulfonyl chloride coupling with p-anisidine",
+      "Low molecular complexity favors good oral bioavailability and solubility",
+      "Sulfonamide is a well-precedented pharmacophore in approved drugs (e.g., antibacterials, COX-2 inhibitors)"
+    ],
+    "reasoning": "This molecule is a methylthiophene sulfonamide coupled to p-methoxyaniline. While it has excellent drug-like physicochemical properties and is trivially synthesized, the thiophene ring is a well-known metabolic liability prone to forming reactive epoxide intermediates, raising significant ADMET safety concerns. The molecule lacks structural novelty or complexity to suggest potent, selective activity at a validated drug target, making its clinical potential limited without substantial optimization. It could serve as a fragment or early hit but is not ready for advancement as-is."
+  },
+  {
+    "name": "Decoy-9 (Piperazine benzamide)",
+    "smiles": "O=C(C1=CC=C(F)C=C1)N2CCN(CC2)C3=CC=CC=C3",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Contains an N-aryl piperazine moiety which is a known hERG liability and CYP inhibition flag",
+      "Relatively flat, lipophilic molecule with potential for off-target promiscuity",
+      "No defined therapeutic target or clear pharmacophore beyond generic piperazine scaffold",
+      "Potential for CYP2D6 and CYP3A4 inhibition due to basic nitrogen and aromatic systems",
+      "Low molecular complexity and lack of sp3 character may lead to poor selectivity"
+    ],
+    "strengths": [
+      "Molecular weight (~298 Da) well within Lipinski drug-like space",
+      "Good balance of LogP (estimated ~2.5-3.0) for oral absorption",
+      "Straightforward two-step synthesis via amide coupling and N-arylation or SNAr",
+      "Piperazine provides a basic nitrogen for salt formation and solubility tuning",
+      "Low number of rotatable bonds and HBD/HBA within acceptable range"
+    ],
+    "reasoning": "This is a simple 1-(4-fluorobenzoyl)-4-phenylpiperazine. While it satisfies Lipinski's rules and is trivially synthesizable, the N-aryl piperazine motif is a well-known structural alert for hERG channel blockade and CYP inhibition, raising significant ADMET concerns. The molecule lacks structural novelty or complexity to suggest a differentiated mechanism of action, and without evidence of potent, selective target engagement, its clinical potential is limited. It resembles a screening hit or building block rather than an optimized drug candidate."
+  },
+  {
+    "name": "Decoy-10 (Oxadiazole amide)",
+    "smiles": "CC1=NN=C(O1)C(=O)NC2=CC=C(C=C2)Cl",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 4,
+    "overall_score": 5.2,
+    "recommendation": "Caution",
+    "concerns": [
+      "Acyl hydrazide-like linkage (oxadiazole-carbonyl-NH) may pose metabolic instability or reactivity concerns",
+      "Para-chloroaniline moiety is a known structural alert for genotoxicity and potential carcinogenicity via reactive metabolite formation",
+      "Relatively flat and simple structure with limited target selectivity features",
+      "Low molecular weight (263 Da) and minimal complexity may result in promiscuous binding or insufficient potency",
+      "The 1,3,4-oxadiazole ring may undergo hydrolytic ring opening under acidic conditions"
+    ],
+    "strengths": [
+      "Excellent compliance with Lipinski's Rule of Five (MW ~263, low HBD/HBA count, good logP range)",
+      "Straightforward two-step synthesis from commercially available starting materials (methyloxadiazole carboxylic acid + 4-chloroaniline)",
+      "Good balance of lipophilicity and polarity for oral absorption",
+      "1,3,4-Oxadiazole is a well-established bioisostere in medicinal chemistry with known biological activities"
+    ],
+    "reasoning": "This molecule is a simple 1,3,4-oxadiazole amide bearing a 4-chloroaniline group. While it has excellent drug-like physicochemical properties and is trivially synthesizable, the para-chloroaniline structural alert raises significant toxicity concerns (aniline metabolites, potential mutagenicity). The molecule appears to be an early-stage fragment or hit compound rather than an optimized lead, lacking the structural complexity typically needed for selective target engagement. The compound warrants caution\u2014the chloroaniline toxicophore should be replaced before advancement."
+  },
+  {
+    "name": "Decoy-11 (Chromone derivative)",
+    "smiles": "O=C1C=C(OC2=CC(=CC=C21)O)C3=CC=C(C=C3)OC",
+    "category": "C_decoy",
+    "drug_likeness": 7,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 5,
+    "overall_score": 5.8,
+    "recommendation": "Caution",
+    "concerns": [
+      "This is 4'-methoxyisoflavone/flavanone scaffold - specifically appears to be 4'-methoxyflavone with a hydroxyl group, closely resembling known natural product flavonoids with historically poor bioavailability",
+      "The chromanone/chromone core with phenolic hydroxyl is a PAINS-like motif prone to non-specific activity in assays",
+      "Michael acceptor present in the enone system (C=C-C=O) raises potential reactivity and toxicity concerns",
+      "Phenolic OH group susceptible to rapid Phase II glucuronidation/sulfation leading to poor oral bioavailability",
+      "Flat aromatic system may have poor aqueous solubility"
+    ],
+    "strengths": [
+      "Low molecular weight (~268 Da) well within Lipinski guidelines",
+      "Appropriate LogP range (estimated ~2.5) for oral absorption",
+      "Simple and well-precedented flavonoid scaffold with extensive SAR literature",
+      "Straightforward synthesis via Baker-Venkataraman or chalcone cyclization routes",
+      "Hydrogen bond donor/acceptor count within acceptable range (2 HBD, 4 HBA)"
+    ],
+    "reasoning": "This molecule is a hydroxylated methoxyflavone, a well-known natural product scaffold. While it satisfies Lipinski's rules and is synthetically accessible, flavonoids as a class have historically suffered from poor oral bioavailability due to extensive first-pass metabolism (glucuronidation of the phenolic OH), potential PAINS behavior in biological assays, and the Michael acceptor reactivity of the enone. Many flavonoid-based drug candidates have failed in clinical development despite promising in vitro activity. Without a clear differentiated mechanism or structural novelty, clinical success probability is moderate at best."
+  },
+  {
+    "name": "Decoy-12 (Triazole ether)",
+    "smiles": "C1=CN=NN1CC2=CC=C(C=C2)OCC3=CC=CC=C3",
+    "category": "C_decoy",
+    "drug_likeness": 6,
+    "admet_safety": 5,
+    "synthetic_feasibility": 9,
+    "clinical_potential": 4,
+    "overall_score": 5.0,
+    "recommendation": "Caution",
+    "concerns": [
+      "Diaryl ether linkage with benzyloxy group is a metabolically labile motif prone to O-dealkylation by CYP enzymes",
+      "Molecule lacks clear pharmacophoric complexity - appears as a simple fragment-like scaffold without strong target engagement features",
+      "1,2,3-triazole connected via methylene to a para-substituted phenyl ring gives a flat, extended topology with limited 3D character (low Fsp3)",
+      "No hydrogen bond donors and limited polar surface area may lead to poor aqueous solubility despite low MW",
+      "Benzyloxy ether group is a known structural alert for reactive metabolite formation"
+    ],
+    "strengths": [
+      "Molecular weight (~305 Da) is well within Lipinski drug-like space",
+      "Straightforward synthetic route: simple SN2 alkylations and commercially available starting materials",
+      "1,2,3-triazole is a well-established bioisostere for amide bonds with good metabolic stability at the heterocycle itself",
+      "Low molecular complexity allows easy SAR exploration and analog generation",
+      "Compliant with Rule of Five parameters (MW, HBA, logP estimates)"
+    ],
+    "reasoning": "This molecule is a simple triazole-methylene-phenyl-O-benzyl ether with good physicochemical properties and excellent synthetic accessibility. However, it lacks the structural sophistication expected of a clinical candidate \u2014 the benzyloxy ether is a well-known metabolic soft spot susceptible to CYP-mediated O-dealkylation, and the overall scaffold is flat with low three-dimensionality. Without evidence of potent target engagement or a clear mechanism of action, this appears more like an early hit or fragment that would require significant optimization before advancing."
+  }
+]

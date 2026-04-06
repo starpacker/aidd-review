@@ -1,0 +1,1602 @@
+% =============================================================================
+% AIDD Review Paper — References (BibTeX)
+% Organized by section relevance
+% Last updated: 2026-04-03 (expanded with newly identified citations)
+% =============================================================================
+
+% ---------------------------------------------------------------------------
+% SECTION 1: Introduction — Investment, Success Rates, Landscape
+% ---------------------------------------------------------------------------
+
+@article{Jayatunga2024,
+  author  = {Jayatunga, Madura K. P. and Ayers, Margaret and Bruens, Léa and Jayanth, Debleena and Meier, Christoph},
+  title   = {How successful are {AI}-discovered drugs in clinical trials? {A} first analysis and emerging lessons},
+  journal = {Drug Discovery Today},
+  year    = {2024},
+  volume  = {29},
+  number  = {6},
+  pages   = {104009},
+  doi     = {10.1016/j.drudis.2024.104009},
+  note    = {PMID: 38692505. BCG analysis of 39 AI-native biotechs, 67 drugs. Phase I: 80-90\%; Phase II: ~40\%}
+}
+
+@article{Wilczok2025,
+  author  = {Wilczok, David and Zhavoronkov, Alex},
+  title   = {Progress, pitfalls, and impact of {AI}-driven clinical trials},
+  journal = {Clinical Pharmacology \& Therapeutics},
+  year    = {2025},
+  volume  = {117},
+  number  = {4},
+  doi     = {10.1002/cpt.3542},
+  note    = {No AI-discovered drugs approved as of 2024. Three AI business models identified}
+}
+
+@article{Jacobson2025,
+  author  = {Jacobson, Robert D.},
+  title   = {The {AI} drug revolution needs a revolution},
+  journal = {npj Drug Discovery},
+  year    = {2025},
+  volume  = {2},
+  pages   = {10},
+  doi     = {10.1038/s44386-025-00013-6},
+  note    = {Perspective. Argues AI operates ``human-agnostic''; needs functional human data}
+}
+
+@techreport{BIO2021,
+  author      = {{BIO} and {Informa Pharma Intelligence} and {QLS Advisors}},
+  title       = {Clinical Development Success Rates and Contributing Factors 2011--2020},
+  year        = {2021},
+  institution = {Biotechnology Innovation Organization},
+  url         = {https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf},
+  note        = {12,728 transitions, 9,704 programs. Phase II: 28.9\%. Biomarker LOA: 25.9\% vs 8.4\%}
+}
+
+@article{Drews2000,
+  author  = {Drews, J{\"u}rgen},
+  title   = {Drug discovery: a historical perspective},
+  journal = {Science},
+  year    = {2000},
+  volume  = {287},
+  number  = {5460},
+  pages   = {1960--1964},
+  doi     = {10.1126/science.287.5460.1960}
+}
+
+% ---------------------------------------------------------------------------
+% SECTION 2: Pipeline — AlphaFold, ADMET, Virtual Screening
+% ---------------------------------------------------------------------------
+
+@article{Jumper2021,
+  author  = {Jumper, John and Evans, Richard and Pritzel, Alexander and others},
+  title   = {Highly accurate protein structure prediction with {AlphaFold}},
+  journal = {Nature},
+  year    = {2021},
+  volume  = {596},
+  pages   = {583--589},
+  doi     = {10.1038/s41586-021-03819-2}
+}
+
+@article{Abramson2024,
+  author  = {Abramson, Josh and Adler, Jonas and Dunger, Jack and others},
+  title   = {Accurate structure prediction of biomolecular interactions with {AlphaFold} 3},
+  journal = {Nature},
+  year    = {2024},
+  volume  = {630},
+  pages   = {493--500},
+  doi     = {10.1038/s41586-024-07487-w}
+}
+
+@article{Zheng2025,
+  author  = {Zheng, Hao and Lin, Haiping and Alade, Adeayo A. and Chen, Jian and Monroy, Estefania Y. and Zhang, Mingzhi and Wang, Junmei},
+  title   = {{AlphaFold3} in drug discovery: a comprehensive assessment of capabilities, limitations, and applications},
+  journal = {bioRxiv},
+  year    = {2025},
+  doi     = {10.1101/2025.04.07.647682},
+  note    = {AF3 fails >5A RMSD conformational changes; kinase selectivity near random; ``true-hit binary interaction modeler''}
+}
+
+@article{Desai2024,
+  author  = {Desai, Dhvani and Kantliwala, Shiv V. and Vybhavi, J. and Ravi, Rashi and Patel, Harsh and Patel, Jigar},
+  title   = {Review of {AlphaFold} 3: transformative advances in drug design and therapeutics},
+  journal = {Cureus},
+  year    = {2024},
+  volume  = {16},
+  number  = {7},
+  pages   = {e63646},
+  doi     = {10.7759/cureus.63646},
+  note    = {40-80\% accuracy variability; 50\% improvement on PoseBusters}
+}
+
+@article{KolaLandis2004,
+  author  = {Kola, Ismail and Landis, John},
+  title   = {Can the pharmaceutical industry reduce attrition rates?},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2004},
+  volume  = {3},
+  pages   = {711--716},
+  note    = {PMID: 15286737. PK/bioavailability failures: ~40\% (1991) → ~10\% (2000)}
+}
+
+@article{Waring2015,
+  author  = {Waring, Michael J. and Arrowsmith, John and Leach, Andrew R. and others},
+  title   = {An analysis of the attrition of drug candidates from four major pharmaceutical companies},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2015},
+  volume  = {14},
+  pages   = {475--486},
+  doi     = {10.1038/nrd4609},
+  note    = {PMID: 26091267. Safety/toxicology dominant cause by 2000-2010}
+}
+
+@article{Sun2022,
+  author  = {Sun, Duxin and Gao, Wei and Hu, Hongxiang and Zhou, Simon},
+  title   = {Why 90\% of clinical drug development fails and how to improve it?},
+  journal = {Acta Pharmaceutica Sinica B},
+  year    = {2022},
+  volume  = {12},
+  number  = {7},
+  pages   = {3049--3062},
+  doi     = {10.1016/j.apsb.2022.02.002},
+  note    = {ADMET/PK attrition: 10-15\% (2010-2017); efficacy: 40-50\%}
+}
+
+@article{Venkataraman2025,
+  author  = {Venkataraman, Meera and Rao, G. Chakravarthi and Madavareddi, Jyothi K. and Maddi, Srinivasa R.},
+  title   = {Leveraging machine learning models in evaluating {ADMET} properties for drug discovery and development},
+  journal = {ADMET and DMPK},
+  year    = {2025},
+  doi     = {10.5599/admet.2772},
+  note    = {ML outperforms QSAR; GNNs and transformers >90\% on some endpoints}
+}
+
+% ---------------------------------------------------------------------------
+% SECTION 3: Chemistry Problem — Successes
+% ---------------------------------------------------------------------------
+
+@article{Ren2025,
+  author  = {Ren, Feng and others},
+  title   = {A generative {AI}-discovered {TNIK} inhibitor for idiopathic pulmonary fibrosis: a randomized phase 2a trial},
+  journal = {Nature Medicine},
+  year    = {2025},
+  doi     = {10.1038/s41591-025-03743-2},
+  note    = {PMID: 40461817. Rentosertib/ISM001-055. 60mg QD: FVC +98.4 mL vs placebo -20.3 mL. 71 patients, 12 weeks, China}
+}
+
+@article{Fensome2024,
+  author  = {Fensome, Andrew and others},
+  title   = {Tyrosine kinase 2 inhibition with zasocitinib ({TAK}-279) in psoriasis: a randomized clinical trial},
+  journal = {JAMA},
+  year    = {2024},
+  doi     = {10.1001/jama.2024.15531},
+  note    = {PMID: 39167366. Phase 2: PASI 75 week 12: 15mg 68\%, 30mg 67\% vs placebo 6\%}
+}
+
+% ---------------------------------------------------------------------------
+% SECTION 4: Biology Problem — Failures, Translation, Data Quality
+% ---------------------------------------------------------------------------
+
+@article{Ineichen2024,
+  author  = {Ineichen, Benjamin V. and others},
+  title   = {Analysis of animal-to-human translation shows that only 5\% of animal-tested therapeutic interventions obtain regulatory approval},
+  journal = {PLOS Biology},
+  year    = {2024},
+  doi     = {10.1371/journal.pbio.3002667},
+  note    = {Umbrella review: 122 systematic reviews, 4,443 animal studies, 367 interventions, 54 diseases. 95\% failure rate}
+}
+
+@techreport{FDA2004,
+  author      = {{U.S. Food and Drug Administration}},
+  title       = {Innovation or Stagnation: Challenge and Opportunity on the Critical Path to New Medical Products},
+  year        = {2004},
+  institution = {FDA},
+  note        = {Original source for 92\% (8\% approval) clinical development failure rate}
+}
+
+@article{Ding2025,
+  author  = {Ding, Qianli and Yao, Rongxiang and Bai, Yang and Da, Lintao and Wang, Yifei and Xiang, Rong and Jiang, Xinyi and Zhai, Fei},
+  title   = {Explainable artificial intelligence in the field of drug research},
+  journal = {Drug Design, Development and Therapy},
+  year    = {2025},
+  volume  = {19},
+  pages   = {4025--4055},
+  doi     = {10.2147/DDDT.S525171},
+  note    = {573 XAI articles analyzed. SHAP and attention dominate. Accuracy-interpretability tradeoff unresolved}
+}
+
+@article{Lavecchia2025,
+  author  = {Lavecchia, Antonio},
+  title   = {Explainable artificial intelligence in drug discovery: bridging predictive power and mechanistic insight},
+  journal = {WIREs Computational Molecular Science},
+  year    = {2025},
+  volume  = {15},
+  number  = {5},
+  pages   = {e70049},
+  doi     = {10.1002/wcms.70049}
+}
+
+@article{Tang2024,
+  author  = {Tang, Xiangru and Dai, Howard and Knight, Elizabeth and Wu, Fang and Li, Yunyang and Li, Tianxiao and Gerstein, Mark},
+  title   = {A survey of generative {AI} for de novo drug design: new frontiers in molecule and protein generation},
+  journal = {Briefings in Bioinformatics},
+  year    = {2024},
+  volume  = {25},
+  number  = {4},
+  pages   = {bbae338},
+  doi     = {10.1093/bib/bbae338},
+  note    = {VAEs to diffusion models. >98.5\% atom stability. >150 AI drugs initiated}
+}
+
+% ---------------------------------------------------------------------------
+% SECTION 5: Automation — SDLs, AI Agents
+% ---------------------------------------------------------------------------
+
+@article{Tom2024,
+  author  = {Tom, Gary and Schmid, Stefan P. and Baird, Sterling G. and others},
+  title   = {Self-driving laboratories for chemistry and materials science},
+  journal = {Chemical Reviews},
+  year    = {2024},
+  volume  = {124},
+  number  = {16},
+  pages   = {9633--9732},
+  doi     = {10.1021/acs.chemrev.4c00055},
+  note    = {Definitive 100-page SDL review. 6x acceleration, 23x performance enhancement}
+}
+
+@article{Graff2021,
+  author  = {Graff, David E. and Shakhnovich, Eugene I. and Coley, Connor W.},
+  title   = {Accelerating high-throughput virtual screening through molecular pool-based active learning},
+  journal = {Chemical Science},
+  year    = {2021},
+  volume  = {12},
+  pages   = {7866--7881},
+  doi     = {10.1039/D0SC06805E},
+  note    = {MolPAL: 94.8\% of top-50K from 2.4\% of 100M library}
+}
+
+@article{Bran2024,
+  author  = {Bran, Andres M. and Cox, Sam and Schilter, Oliver and Baldassari, Carlo and White, Andrew D. and Schwaller, Philippe},
+  title   = {Augmenting large language models with chemistry tools},
+  journal = {Nature Machine Intelligence},
+  year    = {2024},
+  volume  = {6},
+  pages   = {525--535},
+  doi     = {10.1038/s42256-024-00832-8},
+  note    = {ChemCrow: GPT-4 + 18 tools. 4 successful syntheses, novel chromophore}
+}
+
+@article{Boiko2023,
+  author  = {Boiko, Daniil A. and MacKnight, Robert and Kline, Ben and Gomes, Gabe},
+  title   = {Autonomous chemical research with large language models},
+  journal = {Nature},
+  year    = {2023},
+  volume  = {624},
+  pages   = {570--578},
+  doi     = {10.1038/s41586-023-06792-0},
+  note    = {Coscientist: multi-LLM agent. Suzuki/Buchwald-Hartwig optimization}
+}
+
+@article{ChemToolAgent2024,
+  author  = {{OSU-NLP-Group}},
+  title   = {{ChemToolAgent}: the impact of tools on language agents for chemistry problem solving},
+  journal = {arXiv},
+  year    = {2024},
+  eprint  = {2411.07228},
+  note    = {Accepted NAACL 2025. Tools help specialized tasks (0\%→70\%) but hurt general reasoning (80.5\%→71\%)}
+}
+
+% ---------------------------------------------------------------------------
+% SECTION 6: Bridging — OoC, Human-AI Collaboration, Roadmap
+% ---------------------------------------------------------------------------
+
+@article{Ewart2022,
+  author  = {Ewart, Lorna and others},
+  title   = {Performance assessment and economic analysis of a human {Liver-Chip} for predictive toxicology},
+  journal = {Communications Medicine},
+  year    = {2022},
+  volume  = {2},
+  pages   = {209},
+  doi     = {10.1038/s43856-022-00209-1},
+  note    = {870 Liver-Chips, 27 drugs. 87\% sensitivity, 100\% specificity for DILI}
+}
+
+@article{Tan2025,
+  author  = {Tan, Shuonan and Ding, Yifan and Wang, Wanyuan and others},
+  title   = {{DILITracer}: deep learning-based hepatotoxicity prediction from human liver organoid morphology},
+  journal = {Communications Biology},
+  year    = {2025},
+  volume  = {8},
+  pages   = {886},
+  doi     = {10.1038/s42003-025-08205-6},
+  note    = {BEiT-V2 + ViT + LSTM. 82.34\% ternary DILI accuracy from organoid images}
+}
+
+@article{Huh2010,
+  author  = {Huh, Dongeun and Matthews, Benjamin D. and Mammoto, Akiko and Montoya-Zavala, Mart{\'\i}n and Hsin, Hong Yuan and Ingber, Donald E.},
+  title   = {Reconstituting organ-level lung functions on a chip},
+  journal = {Science},
+  year    = {2010},
+  volume  = {328},
+  number  = {5986},
+  pages   = {1662--1668},
+  doi     = {10.1126/science.1188302}
+}
+
+@article{Zhou2025,
+  author  = {Zhou, Yitian and Zhong, Yufei and Lauschke, Volker M.},
+  title   = {Evaluating the synergistic use of advanced liver models and artificial intelligence for drug-induced liver injury prediction},
+  journal = {Expert Opinion on Drug Metabolism \& Toxicology},
+  year    = {2025},
+  volume  = {21},
+  number  = {5},
+  pages   = {563--577},
+  note    = {PMID: 39893552}
+}
+
+@article{Silva2025,
+  author  = {Silva, Andr{\'e} and Vale, Nuno},
+  title   = {Digital twins in personalized medicine: bridging innovation and clinical reality},
+  journal = {Journal of Personalized Medicine},
+  year    = {2025},
+  doi     = {10.3390/jpm15110503},
+  note    = {Few digital twins in routine practice. Barriers: regulatory, interoperability, bias}
+}
+
+% ---------------------------------------------------------------------------
+% REGULATORY
+% ---------------------------------------------------------------------------
+
+@misc{FDAModernization2022,
+  author = {{117th United States Congress}},
+  title  = {{FDA} Modernization Act 2.0 ({S}.5002)},
+  year   = {2022},
+  note   = {Signed December 29, 2022. Removed animal testing requirement for IND applications}
+}
+
+@misc{FDAAIGuidance2025,
+  author = {{U.S. Food and Drug Administration}},
+  title  = {Considerations for the Use of Artificial Intelligence To Support Regulatory Decision-Making for Drug and Biological Products},
+  year   = {2025},
+  note   = {Draft guidance, January 6, 2025. 7-step credibility framework. Excludes drug discovery scope}
+}
+
+@misc{FDAAnimalPhaseOut2025,
+  author = {{U.S. Food and Drug Administration}},
+  title  = {{FDA} Announces Plan to Phase Out Animal Testing Requirement for Monoclonal Antibodies and Other Drugs},
+  year   = {2025},
+  note   = {Press announcement, April 10, 2025. Animal testing to become exception within 3-5 years}
+}
+
+% ---------------------------------------------------------------------------
+% GENERAL REVIEWS (existing_reviews.md entries)
+% ---------------------------------------------------------------------------
+
+@article{ACSomega2025,
+  author  = {multiple},
+  title   = {{AI}-driven drug discovery: a comprehensive review},
+  journal = {ACS Omega},
+  year    = {2025},
+  doi     = {10.1021/acsomega.5c00549},
+  note    = {R1. Methods taxonomy 2019-2024}
+}
+
+@article{NatMed2025,
+  author  = {multiple},
+  title   = {Artificial intelligence in drug development},
+  journal = {Nature Medicine},
+  year    = {2025},
+  doi     = {10.1038/s41591-024-03434-4},
+  note    = {R4. State-of-the-art applications review}
+}
+
+% ---------------------------------------------------------------------------
+% CASE STUDY PRIMARY SOURCES
+% ---------------------------------------------------------------------------
+
+@misc{BEN2293Press2023,
+  author = {{BenevolentAI}},
+  title  = {Top-line Phase {IIa} results for {BEN-2293} in mild-to-moderate atopic dermatitis},
+  year   = {2023},
+  note   = {Press release, April 5, 2023. 91 patients. Safety met; EASI/NRS not met in ITT}
+}
+
+@misc{EXS21546Phase1a2022,
+  author = {{Exscientia}},
+  title  = {{EXS-21546} Phase 1a topline data},
+  year   = {2022},
+  note   = {BusinessWire, June 14, 2022. 60 healthy volunteers. Target profile confirmed}
+}
+
+@misc{EXS21546Terminated2023,
+  author = {{Exscientia}},
+  title  = {Pipeline prioritisation strategy announcement},
+  year   = {2023},
+  note   = {BusinessWire, October 3, 2023. ``Challenging to reach a suitable therapeutic index''}
+}
+
+@misc{REC994ISC2025,
+  author = {{Recursion Pharmaceuticals}},
+  title  = {{SYCAMORE} Phase 2 trial results for {REC-994} in cerebral cavernous malformation},
+  year   = {2025},
+  note   = {ISC presentation, February 5, 2025. 62 patients. 400mg -457 mm³ but p=0.449}
+}
+
+@article{AZD4635_2022,
+  author  = {others},
+  title   = {{AZD4635} Phase {Ia/b} results in solid tumors},
+  journal = {Clinical Cancer Research},
+  year    = {2022},
+  doi     = {10.1158/1078-0432.CCR-22-0986},
+  note    = {PMID: 36044531. A2A antagonist. Limited efficacy despite target engagement}
+}
+
+% ---------------------------------------------------------------------------
+% ADDITIONAL KEY REFERENCES
+% ---------------------------------------------------------------------------
+
+@article{Pearl2009,
+  author  = {Pearl, Judea},
+  title   = {Causality: Models, Reasoning, and Inference},
+  journal = {Cambridge University Press},
+  year    = {2009},
+  edition = {2nd},
+  note    = {Foundation for causal inference in drug discovery}
+}
+
+@article{Boehr2009,
+  author  = {Boehr, David D. and Nussinov, Ruth and Wright, Peter E.},
+  title   = {The role of dynamic conformational ensembles in biomolecular recognition},
+  journal = {Nature Chemical Biology},
+  year    = {2009},
+  volume  = {5},
+  pages   = {789--796},
+  doi     = {10.1038/nchembio.232}
+}
+
+@article{Ferrari2023,
+  author  = {Ferrari, Enrico and others},
+  title   = {{LivHeart} multi-organ-on-chip platform for off-target cardiotoxicity},
+  journal = {Advanced Materials Technologies},
+  year    = {2023},
+  doi     = {10.1002/admt.202201435}
+}
+
+@article{Lu2025,
+  author  = {Lu, others},
+  title   = {Large language models and their applications in drug discovery: a primer},
+  journal = {Clinical and Translational Science},
+  year    = {2025},
+  doi     = {10.1111/cts.70205},
+  note    = {Three collaboration levels: tool/assistant/partner. Hallucinations key limit}
+}
+
+% ---------------------------------------------------------------------------
+% NEWLY ADDED — Missing Citations from Raw Agent Data
+% ---------------------------------------------------------------------------
+
+% --- Section 3: RLY-2608 (Relay Therapeutics) ---
+
+@article{Varkaris2024,
+  author  = {Varkaris, Andreas and Pazolli, Elisa and Gunaydin, Hakan and others},
+  title   = {Discovery and clinical proof-of-concept of {RLY-2608}, a first-in-class mutant-selective allosteric {PI3K$\alpha$} inhibitor that decouples antitumor activity from hyperinsulinemia},
+  journal = {Cancer Discovery},
+  year    = {2024},
+  volume  = {14},
+  number  = {2},
+  pages   = {240--257},
+  doi     = {10.1158/2159-8290.CD-23-0944},
+  note    = {Phase 3 (ReDiscover-2, NCT06982521). Dynamo platform: cryo-EM + MD simulations. Median PFS 10.3 mo; kinase-domain mutations 18.4 mo}
+}
+
+% --- Section 2/3: Schneider 2018 (MPO foundation) ---
+
+@article{Schneider2018,
+  author  = {Schneider, Gisbert},
+  title   = {Automating drug discovery},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2018},
+  volume  = {17},
+  pages   = {97--113},
+  doi     = {10.1038/nrd.2017.232},
+  note    = {Foundational MPO reference. Drug discovery = multi-dimensional optimization. DMTA automation vision}
+}
+
+% --- Section 4.3: Walters & Barzilay 2021 (Benchmark critique) ---
+
+@article{Walters2021,
+  author  = {Walters, W. Patrick and Barzilay, Regina},
+  title   = {Critical assessment of {AI} in drug discovery},
+  journal = {Expert Opinion on Drug Discovery},
+  year    = {2021},
+  volume  = {16},
+  number  = {9},
+  pages   = {937--947},
+  doi     = {10.1080/17460441.2021.1915982},
+  note    = {Random vs temporal splits inflate metrics. Data leakage. Benchmark limitations}
+}
+
+% --- Section 4.2: Mobley & Gilson 2017 (Solvation modeling) ---
+
+@article{Mobley2017,
+  author  = {Mobley, David L. and Gilson, Michael K.},
+  title   = {Predicting binding free energies: frontiers and benchmarks},
+  journal = {Annual Review of Biophysics},
+  year    = {2017},
+  volume  = {46},
+  pages   = {531--558},
+  doi     = {10.1146/annurev-biophys-070816-033654},
+  note    = {Buffer/salt shifts binding free energies by 2.5-2.8 kcal/mol (~100-fold error). Three error sources: sampling, force field, system misrepresentation}
+}
+
+% --- Section 6.3: Feuerriegel 2024 (Causal ML) ---
+
+@article{Feuerriegel2024,
+  author  = {Feuerriegel, Stefan and Frauen, Dennis and Melnychuk, Valentyn and others},
+  title   = {Causal machine learning for predicting treatment outcomes},
+  journal = {Nature Medicine},
+  year    = {2024},
+  volume  = {30},
+  number  = {4},
+  pages   = {958--968},
+  doi     = {10.1038/s41591-024-02902-1},
+  note    = {Causal ML estimates ITE. Methods: GANITE. Three applications: drug efficacy, safety monitoring, personalized therapy}
+}
+
+% --- Section 4.4: Yun 2008 (EGFR T790M) ---
+
+@article{Yun2008,
+  author  = {Yun, Cai-Hong and Mengwasser, Kurt E. and Toms, Angela V. and others},
+  title   = {The {T790M} mutation in {EGFR} kinase causes drug resistance by increasing the affinity for {ATP}},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2008},
+  volume  = {105},
+  number  = {6},
+  pages   = {2070--2075},
+  doi     = {10.1073/pnas.0709662105},
+  note    = {Overturned steric blockade hypothesis. T790M increases ATP affinity >10-fold}
+}
+
+% --- Section 4.4: Crooke 2021 (ASO review) ---
+
+@article{Crooke2021,
+  author  = {Crooke, Stanley T. and Liang, Xue-Hai and Baker, Brenda F. and Crooke, Rosanne M.},
+  title   = {Antisense technology: a review},
+  journal = {Journal of Biological Chemistry},
+  year    = {2021},
+  volume  = {296},
+  pages   = {100416},
+  doi     = {10.1016/j.jbc.2021.100416},
+  note    = {GalNAc: 15-30x potency increase. Higher-affinity mods paradoxically increase toxicity. No AI discussion}
+}
+
+% --- Section 4.1: NRDD Dec 2025 (Phase II/III terminations) ---
+
+@article{Bowling2025,
+  author  = {Bowling, Hannah and Cocucci, Andrea and Koo, Daniel C. E. and Harrison, Roy K.},
+  title   = {Analysis of phase {II} and phase {III} clinical trial terminations from 2013 to 2023},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2025},
+  doi     = {10.1038/d41573-025-00208-6},
+  note    = {PMID: 41413264. N=3,180 terminated trials. Strategic 36\%, efficacy 24\%, enrollment 18\%, safety 5\%. Rate doubled 11\%→22\%}
+}
+
+% --- Section 6.3: Hasin 2017 (Multi-omics) ---
+
+@article{Hasin2017,
+  author  = {Hasin, Yehudit and Seldin, Marcus and Lusis, Aldons},
+  title   = {Multi-omics approaches to disease},
+  journal = {Genome Biology},
+  year    = {2017},
+  volume  = {18},
+  number  = {1},
+  pages   = {83},
+  doi     = {10.1186/s13059-017-1215-1},
+  note    = {Three integration frameworks: genome-first, phenotype-first, environment-first}
+}
+
+% --- Section 6.1: Tak 2024 (OoC+ML empirical) ---
+
+@article{Tak2024,
+  author  = {Tak, Seonghun and others},
+  title   = {{CNN}-based prediction of gemcitabine resistance from 3D microfluidic bladder cancer chip},
+  journal = {Frontiers in Bioengineering and Biotechnology},
+  year    = {2024},
+  volume  = {11},
+  pages   = {1302983},
+  doi     = {10.3389/fbioe.2023.1302983},
+  note    = {Strongest OoC+ML empirical study. 2,674 cell images, accuracy 95.2\%, AUC >0.988}
+}
+
+% --- Section 4.3: Publication bias references ---
+
+@article{Begley2012,
+  author  = {Begley, C. Glenn and Ellis, Lee M.},
+  title   = {Drug development: raise standards for preclinical cancer research},
+  journal = {Nature},
+  year    = {2012},
+  volume  = {483},
+  pages   = {531--533},
+  doi     = {10.1038/483531a},
+  note    = {Amgen replicated 53 landmark cancer studies: only 6/53 (11\%) confirmed}
+}
+
+@article{Prinz2011,
+  author  = {Prinz, Florian and Schlange, Thomas and Asadullah, Khusru},
+  title   = {Believe it or not: how much can we rely on published data on potential drug targets?},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2011},
+  volume  = {10},
+  pages   = {712},
+  doi     = {10.1038/nrd3439-c1},
+  note    = {Bayer: only ~25\% of published findings could be validated}
+}
+
+@article{Smaldino2016,
+  author  = {Smaldino, Paul E. and McElreath, Richard},
+  title   = {The natural selection of bad science},
+  journal = {Royal Society Open Science},
+  year    = {2016},
+  volume  = {3},
+  number  = {9},
+  pages   = {160384},
+  doi     = {10.1098/rsos.160384},
+  note    = {Agent-based model: publication volume incentive selects for low-power methods. Not drug-specific}
+}
+
+% --- Section 4.2: Biochemistry case study citations ---
+
+@article{Larfors2023,
+  author  = {Larfors, Gunilla and others},
+  title   = {Proton pump inhibitor use is associated with inferior outcome in chronic myeloid leukaemia patients on dasatinib},
+  journal = {European Journal of Haematology},
+  year    = {2023},
+  doi     = {10.1111/ejh.14059},
+  note    = {5-year OS with PPI: 79\% vs without: 94\% (HR 3.5, p<0.0001)}
+}
+
+@article{Mega2010,
+  author  = {Mega, Jessica L. and Simon, Tabassome and Collet, Jean-Philippe and others},
+  title   = {Reduced-function {CYP2C19} genotype and risk of adverse clinical outcomes among patients treated with clopidogrel},
+  journal = {JAMA},
+  year    = {2010},
+  volume  = {304},
+  number  = {16},
+  pages   = {1821--1830},
+  doi     = {10.1001/jama.2010.1543},
+  note    = {Meta-analysis >9,000 pts. HR 1.57 MACE; HR 2.81 stent thrombosis in PM/IM}
+}
+
+@article{Suntharalingam2006,
+  author  = {Suntharalingam, Ganesh and Perry, Meghan R. and Ward, Stephen and others},
+  title   = {Cytokine storm in a phase 1 trial of the anti-{CD28} monoclonal antibody {TGN1412}},
+  journal = {New England Journal of Medicine},
+  year    = {2006},
+  volume  = {355},
+  pages   = {1018--1028},
+  doi     = {10.1056/NEJMoa063842},
+  note    = {6/6 volunteers: life-threatening cytokine storm within 90 min. Dose 500x below safe animal dose}
+}
+
+@article{McKenzie1995,
+  author  = {McKenzie, R. and Fried, M. W. and Sallie, R. and others},
+  title   = {Hepatic failure and lactic acidosis due to fialuridine ({FIAU}), an investigational nucleoside analogue for chronic hepatitis {B}},
+  journal = {New England Journal of Medicine},
+  year    = {1995},
+  volume  = {333},
+  pages   = {1099--1105},
+  doi     = {10.1056/NEJM199510263331702},
+  note    = {PMID: 7565947. 7/15 severe hepatic failure; 5 died, 2 liver transplants. Species-specific hENT1 mitochondrial targeting}
+}
+
+% --- Section 4.2: Computational toxicology ---
+
+@article{Zhang2025comptox,
+  author  = {Zhang, Jing and others},
+  title   = {Computational toxicology in drug discovery: applications of {AI} in {ADMET} and toxicity prediction},
+  journal = {Briefings in Bioinformatics},
+  year    = {2025},
+  volume  = {26},
+  number  = {5},
+  pages   = {bbaf533},
+  doi     = {10.1093/bib/bbaf533},
+  note    = {Claims 40\% preclinical ADMET failure and 30\% drug withdrawal — both trace to Kola \& Landis 2004 (historical 1991 figure)}
+}
+
+% --- Section 4.3: AI vs older methods ---
+
+@article{Niazi2025,
+  author  = {Niazi, Sarfaraz K.},
+  title   = {Artificial intelligence in small-molecule drug discovery: a critical review},
+  journal = {Pharmaceuticals},
+  year    = {2025},
+  volume  = {18},
+  number  = {9},
+  pages   = {1271},
+  doi     = {10.3390/ph18091271},
+  note    = {Traditional docking AUC 0.70-0.80 vs AI-enhanced 0.72-0.82. Single-author critical review}
+}
+
+% --- Section 6.2: Schuhmacher (corrected from 2020 to 2023) ---
+
+@article{Schuhmacher2023,
+  author  = {Schuhmacher, Alexander and others},
+  title   = {Investigating the origins of recent pharmaceutical innovation},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2023},
+  volume  = {22},
+  number  = {10},
+  pages   = {781--782},
+  doi     = {10.1038/d41573-023-00102-z},
+  note    = {65\% of drugs approved 2015-2021 originated externally; only 28\% in-house. FIPCO→BIPCO transition}
+}
+
+% --- Section 3: Zasocitinib corrected citation ---
+
+@article{Armstrong2024,
+  author  = {Armstrong, April W. and others},
+  title   = {Phase 2b clinical trial of zasocitinib ({TAK-279}) in psoriasis},
+  journal = {JAMA Dermatology},
+  year    = {2024},
+  doi     = {10.1001/jamadermatol.2024.2701},
+  note    = {PMC11339701. 287 randomized. PASI 75: 15mg 68\%, 30mg 67\%. Paper says only ``computationally enabled design strategy'' — NO mention of AI/ML/Schrodinger}
+}
+
+% --- Section 6.1: OoC+AI reviews ---
+
+@article{Gangwal2025,
+  author  = {Gangwal, Amit and Lavecchia, Antonio},
+  title   = {AI + organ-on-chip + digital twins to replace animal testing},
+  journal = {Drug Discovery Today},
+  year    = {2025},
+  doi     = {10.1016/j.drudis.2025.104360},
+  note    = {AI plays critical role in overcoming OoC/DT limitations. Mentions Tox-GAN}
+}
+
+% --- Section 6.1: PNAS 2022 (Microfluidics + DL) ---
+
+@article{PNAS2022microfluidics,
+  author  = {others},
+  title   = {Automated high-throughput microfluidic platform with deep learning for immunotherapy screening},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2022},
+  volume  = {119},
+  number  = {46},
+  pages   = {e2214569119},
+  doi     = {10.1073/pnas.2214569119},
+  note    = {DL tracked 100 spheroids, >7,000 immobilized tumor spheroids, 30 treatment conditions}
+}
+
+% --- Section 4.2: Solanezumab Alzheimer's translation failure ---
+
+@article{Bhatt2024,
+  author  = {Bhatt, Dhriti K. and others},
+  title   = {Lessons from the failure of anti-amyloid therapies},
+  journal = {Expert Opinion on Drug Discovery},
+  year    = {2024},
+  doi     = {10.1080/17460441.2024.2348142},
+  note    = {Transgenic mouse models fundamentally differ from human AD. Solanezumab Phase III x3 failure}
+}
+
+% --- Section 4.2: Ximelagatran ---
+
+@article{Keisu2010,
+  author  = {Keisu, Magnus and Andersson, Tommy B.},
+  title   = {Drug-induced liver injury in humans: the case of ximelagatran},
+  journal = {Handbook of Experimental Pharmacology},
+  year    = {2010},
+  doi     = {10.1007/978-3-642-00663-0_13},
+  note    = {PMID: 20020269. No hepatotoxicity in any preclinical species. 6\% ALT >3x ULN. HLA-mediated idiosyncratic}
+}
+
+% ---------------------------------------------------------------------------
+% DEEP DIVE — Benchmark Gap Evidence
+% ---------------------------------------------------------------------------
+
+@article{LPPDBBind2024,
+  author  = {Li, Jie and Guan, Xingyi and Zhang, Oufan and Sun, Kunyang and Wang, Yingze and Bagni, Dorian and Head-Gordon, Teresa},
+  title   = {Leak Proof {PDBBind}: a reorganized dataset of protein-ligand complexes for more generalizable binding affinity prediction},
+  journal = {arXiv},
+  year    = {2024},
+  eprint  = {2308.09639},
+  note    = {PDBBind leakage: identical proteins/ligands in train/test. DeepDTA inflated by 0.95 kcal/mol. RF-Score negative correlation on OOD target}
+}
+
+% ---------------------------------------------------------------------------
+% DEEP DIVE — Causal Inference & MR
+% ---------------------------------------------------------------------------
+
+@article{Michoel2023,
+  author  = {Michoel, Tom and Zhang, Jitao David},
+  title   = {Causal inference in drug discovery and development},
+  journal = {Drug Discovery Today},
+  year    = {2023},
+  volume  = {28},
+  number  = {10},
+  pages   = {103737},
+  doi     = {10.1016/j.drudis.2023.103737},
+  note    = {Six-step causal inference model for drug discovery. Causal language needed throughout pipeline}
+}
+
+@article{Nelson2015,
+  author  = {Nelson, Matthew R. and Tipney, Hannah and Painter, Jeffery L. and others},
+  title   = {The support of human genetic evidence for approved drug indications},
+  journal = {Nature Genetics},
+  year    = {2015},
+  volume  = {47},
+  number  = {8},
+  pages   = {856--860},
+  doi     = {10.1038/ng.3314},
+  note    = {Genetic support doubles clinical success rate. 2\% preclinical vs 8.2\% approved}
+}
+
+@article{Minikel2024,
+  author  = {Minikel, Eric Vallabh and Painter, Jeffery L. and Dong, Coco Chenxi and Nelson, Matthew R.},
+  title   = {Refining the impact of genetic evidence on clinical success},
+  journal = {Nature},
+  year    = {2024},
+  volume  = {629},
+  pages   = {624--629},
+  doi     = {10.1038/s41586-024-07316-0},
+  note    = {Genetic support: 2.6x greater success probability (refined from 2x in Nelson 2015)}
+}
+
+% ---------------------------------------------------------------------------
+% DEEP DIVE — Digital Twins
+% ---------------------------------------------------------------------------
+
+@article{Wang2025unlearn,
+  author  = {Wang, Di and Florian, Hank and Lynch, Shannon Y. and others},
+  title   = {Using {AI}-generated digital twins to boost clinical trial efficiency in {Alzheimer}'s disease},
+  journal = {Alzheimer's \& Dementia: Translational Research \& Clinical Interventions},
+  year    = {2025},
+  volume  = {11},
+  pages   = {e70181},
+  doi     = {10.1002/trc2.70181},
+  note    = {Unlearn PROCOVA. 9-15\% variance reduction. Control arm reducible by 17-26\%. EMA qualified Sept 2022}
+}
+
+% ---------------------------------------------------------------------------
+% DEEP DIVE — Multi-omics Updates
+% ---------------------------------------------------------------------------
+
+@article{Jaeger2023,
+  author  = {Jaeger, Stefanie and others},
+  title   = {Applications of single-cell {RNA} sequencing in drug discovery and development},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2023},
+  volume  = {22},
+  pages   = {496--520},
+  doi     = {10.1038/s41573-023-00688-4},
+  note    = {scRNA-seq targets more likely to enter clinical development and pass Phase I}
+}
+
+% ---------------------------------------------------------------------------
+% DEEP DIVE — Competitor (to cite and differentiate)
+% ---------------------------------------------------------------------------
+
+@article{Yildirim2025,
+  author  = {Yildirim, Zeynep and Swanson, Kyle and Wu, Xiaojie and Zou, James and Wu, Joseph C.},
+  title   = {Next-gen therapeutics: pioneering drug discovery with {iPSCs}, genomics, {AI}, and clinical trials in a dish},
+  journal = {Annual Review of Pharmacology and Toxicology},
+  year    = {2025},
+  volume  = {65},
+  pages   = {71--90},
+  doi     = {10.1146/annurev-pharmtox-022724-095035},
+  note    = {iPSC+OoC+AI for cardiovascular drug discovery. Closest competitor but narrow scope}
+}
+
+% ---------------------------------------------------------------------------
+% DEEP DIVE — OoC+AI Companies
+% ---------------------------------------------------------------------------
+
+@article{Hesperos2025,
+  author  = {Hesperos and others},
+  title   = {First digital twin of human disease using organ-on-chip platform},
+  journal = {Advanced Science},
+  year    = {2025},
+  note    = {Malaria-on-a-Chip: multi-organ system + PK/PD digital twin. Closest academic OoC+computational integration}
+}
+
+@article{BenevolentAI2024KG,
+  author  = {BenevolentAI and others},
+  title   = {An experimentally validated approach to automated biological evidence generation in drug discovery using knowledge graphs},
+  journal = {Nature Communications},
+  year    = {2024},
+  volume  = {15},
+  pages   = {5624},
+  doi     = {10.1038/s41467-024-50024-6},
+  note    = {Causal reasoning over knowledge graphs for drug target validation}
+}
+
+% ---------------------------------------------------------------------------
+% ROUND 2 DEEP DIVES (2026-04-04) — Physics-Based Methods
+% ---------------------------------------------------------------------------
+
+@article{Wang2015FEP,
+  author  = {Wang, Lingle and Wu, Yujie and Deng, Yuqing and Kim, Byungchan and Pierce, Levi and Krilov, Goran and Lupyan, Dmitry and Robinson, Shaughnessy and Dahlgren, Markus K. and Greenwood, Jeremy and Romero, Danielle L. and Masse, Craig and Knight, Jennifer L. and Steinbrecher, Thomas and Beuming, Thijs and Damm, Wolfgang and Harder, Edward and Sherman, Woody and Brewer, Mark and Wester, Ron and Murcko, Mark and Frye, Leah and Farid, Ramy and Lin, Teng and Mobley, David L. and Jorgensen, William L. and Berne, Bruce J. and Friesner, Richard A. and Abel, Robert},
+  title   = {Accurate and Reliable Prediction of Relative Ligand Binding Potency in Prospective Drug Discovery by Way of a Modern Free-Energy Calculation Protocol and Force Field},
+  journal = {Journal of the American Chemical Society},
+  year    = {2015},
+  volume  = {137},
+  number  = {7},
+  pages   = {2695--2703},
+  doi     = {10.1021/ja512751q},
+  note    = {Landmark FEP+ validation: 8 targets, 199 ligands, MUE 0.9 kcal/mol, R=0.75}
+}
+
+@article{Ross2023FEP,
+  author  = {Ross, Gregory A. and Lu, Chuanjie and Scarabelli, Guido and Albanese, Salvatorie K. and Houang, Elisa and Abel, Robert and Harder, Edward D. and Wang, Lingle},
+  title   = {The maximal and current accuracy of rigorous protein-ligand binding free energy calculations},
+  journal = {Communications Chemistry},
+  year    = {2023},
+  volume  = {6},
+  pages   = {222},
+  doi     = {10.1038/s42004-023-01019-9},
+  note    = {FEP+ RMSE 1.17 kcal/mol; experimental noise RMSE 0.91 — approaching ceiling}
+}
+
+@article{Schindler2020FEP,
+  author  = {Schindler, Christina E. M. and others},
+  title   = {Large-Scale Assessment of Binding Free Energy Calculations in Active Drug Discovery Projects},
+  journal = {Journal of Chemical Information and Modeling},
+  year    = {2020},
+  volume  = {60},
+  number  = {11},
+  pages   = {5457--5474},
+  doi     = {10.1021/acs.jcim.0c00900},
+  note    = {Merck KGaA: 12 targets, 19 series, 1500 molecules deprioritized via FEP+}
+}
+
+@article{Graber2025CleanSplit,
+  author  = {Graber, Tobias and others},
+  title   = {Resolving data bias improves generalization in binding affinity prediction},
+  journal = {Nature Machine Intelligence},
+  year    = {2025},
+  doi     = {10.1038/s42256-025-01124-5},
+  note    = {CleanSplit: removing PDBbind leakage increases ML RMSE by 42\%; nearest-neighbor competitive with DL}
+}
+
+@article{Bhati2024ABFE,
+  author  = {Bhati, Agastya P. and Wan, Shunzhou and Coveney, Peter V.},
+  title   = {Equilibrium and Nonequilibrium Ensemble Methods for Accurate, Precise and Reproducible Absolute Binding Free Energy Calculations},
+  journal = {Journal of Chemical Theory and Computation},
+  year    = {2024},
+  doi     = {10.1021/acs.jctc.4c01389},
+  note    = {ABFE: 219 complexes, corrected MUE 0.93 kcal/mol; uncorrected RMSE 4.38}
+}
+
+@article{Varkaris2024RLY2608,
+  author  = {Varkaris, Andreas and others},
+  title   = {Discovery and Clinical Proof-of-Concept of {RLY-2608}, a First-in-Class Mutant-Selective Allosteric {PI3K$\alpha$} Inhibitor That Decouples Antitumor Activity from Hyperinsulinemia},
+  journal = {Cancer Discovery},
+  year    = {2024},
+  volume  = {14},
+  number  = {2},
+  pages   = {240--257},
+  doi     = {10.1158/2159-8290.CD-23-0944},
+  note    = {Long-timescale MD (10-100$\mu$s) revealed cryptic allosteric pocket; FDA BTD Feb 2026}
+}
+
+% ---------------------------------------------------------------------------
+% ROUND 2 — Phase II Failures & Target Validation
+% ---------------------------------------------------------------------------
+
+@article{Harrison2016,
+  author  = {Harrison, Robert K.},
+  title   = {Phase {II} and phase {III} failures: 2013--2015},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2016},
+  volume  = {15},
+  pages   = {817--818},
+  doi     = {10.1038/nrd.2016.184},
+  note    = {218 failures: efficacy 52\%, safety 24\%, other 24\%}
+}
+
+@article{Bowling2025,
+  author  = {Bowling, Heather and Cocucci, Alexander and Koo, David C. E. and Harrison, Robert K.},
+  title   = {Analysis of phase {II} and phase {III} clinical trial terminations from 2013 to 2023},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2025},
+  doi     = {10.1038/d41573-025-00208-6},
+  note    = {3,180 terminated trials; late-stage terminations doubled 11\%→22\%; strategic > efficacy}
+}
+
+@article{Cook2014_5Rs,
+  author  = {Cook, David and Brown, Dearg and Alexander, Robert and March, Ruth and Morgan, Paul and Satterthwaite, Gemma and Pangalos, Menelas N.},
+  title   = {Lessons learned from the fate of {AstraZeneca}'s drug pipeline: a five-dimensional framework},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2014},
+  volume  = {13},
+  pages   = {419--431},
+  doi     = {10.1038/nrd4309},
+  note    = {5Rs framework: 142 projects 2005-2010; efficacy 65\% of Phase II failures}
+}
+
+@article{Morgan2018_5Rs,
+  author  = {Morgan, Paul and Brown, Dearg G. and Lennard, Simon and others},
+  title   = {Impact of a five-dimensional framework on {R\&D} productivity at {AstraZeneca}},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2018},
+  volume  = {17},
+  pages   = {167--181},
+  doi     = {10.1038/nrd.2017.244},
+  note    = {5Rs implementation: success rate 4\%→19\% (candidate→Phase III), ~5-fold improvement}
+}
+
+@article{Morgan2012Pillars,
+  author  = {Morgan, Paul and Van Der Graaf, Piet H. and others},
+  title   = {Can the flow of medicines be improved? {F}undamental pharmacokinetic and pharmacological principles toward improving {Phase II} survival},
+  journal = {Drug Discovery Today},
+  year    = {2012},
+  volume  = {17},
+  pages   = {419--424},
+  note    = {Pfizer Three Pillars: 43\% of efficacy failures couldn't confirm mechanism tested}
+}
+
+@article{Nelson2015Genetics,
+  author  = {Nelson, Matthew R. and Tipney, Hannah and Painter, Jeffery L. and others},
+  title   = {The support of human genetic evidence for approved drug indications},
+  journal = {Nature Genetics},
+  year    = {2015},
+  volume  = {47},
+  pages   = {856--860},
+  doi     = {10.1038/ng.3314},
+  note    = {22,270 drugs; genetic support 2.0\% preclinical→8.2\% approved; 2-fold success increase}
+}
+
+@article{Minikel2024,
+  author  = {Minikel, Eric Vallabh and Painter, Jeffery L. and Dong, Coco Chenxi and Nelson, Matthew R.},
+  title   = {Refining the impact of genetic evidence on clinical success},
+  journal = {Nature},
+  year    = {2024},
+  volume  = {629},
+  pages   = {624--629},
+  doi     = {10.1038/s41586-024-07316-0},
+  note    = {29,476 T-I pairs; genetic support 2.6x success; OMIM 3.7x; only 4.8\% with germline support}
+}
+
+@article{Dowden2019,
+  author  = {Dowden, Helen and Munro, Jamie},
+  title   = {Trends in clinical success rates and therapeutic focus},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2019},
+  volume  = {18},
+  pages   = {495--496},
+  doi     = {10.1038/d41573-019-00074-z},
+  note    = {Phase II→III transition: 49-50\% (2010-2012) to 61-63\% (2015-2017)}
+}
+
+@article{Scannell2016Eroom,
+  author  = {Scannell, Jack W. and Bosley, Jim},
+  title   = {When Quality Beats Quantity: {D}ecision Theory, Drug Discovery, and the Reproducibility Crisis},
+  journal = {PLoS ONE},
+  year    = {2016},
+  volume  = {11},
+  number  = {2},
+  pages   = {e0147215},
+  doi     = {10.1371/journal.pone.0147215},
+  note    = {0.1 correlation improvement offsets 10-100x screening throughput; Eroom's Law root cause}
+}
+
+@article{Sun2025ClinSR,
+  author  = {Sun, Duxin and others},
+  title   = {Dynamic clinical trial success rates for drugs in the 21st century},
+  journal = {Nature Communications},
+  year    = {2025},
+  doi     = {10.1038/s41467-025-64552-2},
+  note    = {ClinSR declining but recently plateauing; ClinSR.org platform}
+}
+
+% ---------------------------------------------------------------------------
+% ROUND 2 — Multi-Omics, Foundation Models, Digital Twins
+% ---------------------------------------------------------------------------
+
+@article{Ochoa2022,
+  author  = {Ochoa, David and Karim, Mohd and Ghoussaini, Maya and Hulcoop, David G. and McDonagh, Ellen M. and Dunham, Ian},
+  title   = {Human genetics evidence supports two-thirds of the 2021 {FDA}-approved drugs},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2022},
+  volume  = {21},
+  number  = {8},
+  pages   = {551},
+  doi     = {10.1038/d41573-022-00120-3},
+  note    = {Genetics supports ~67\% of 2021 FDA-approved drugs}
+}
+
+@article{King2019,
+  author  = {King, Elizabeth A. and Davis, J. Wade and Degner, Jacob F.},
+  title   = {Are drug targets with genetic support twice as likely to be approved?},
+  journal = {PLoS Genetics},
+  year    = {2019},
+  volume  = {15},
+  number  = {12},
+  pages   = {e1008489},
+  doi     = {10.1371/journal.pgen.1008489},
+  note    = {Mendelian/coding GWAS variants: >2-fold approval increase}
+}
+
+@article{Dann2024scRNA,
+  author  = {Dann, Emma and Teeple, Emily and Elmentaite, Rasa and others},
+  title   = {Estimating the impact of single-cell {RNA} sequencing of human tissues on drug target validation},
+  journal = {medRxiv},
+  year    = {2024},
+  doi     = {10.1101/2024.04.04.24305313},
+  note    = {30 diseases, 13 tissues: scRNA-seq can ~triple Phase III chances}
+}
+
+@article{Ravarani2026MR,
+  author  = {Ravarani, Charles N. J. and others},
+  title   = {Retrospective evaluation of human genetic evidence for clinical trial success using {Mendelian} randomization and machine learning},
+  journal = {medRxiv},
+  year    = {2026},
+  doi     = {10.1101/2026.02.19.26346536},
+  note    = {11,482 T-I pairs; MR alone ≠ enrichment; MR+XGBoost = 55\% approval (6.4x)}
+}
+
+@article{Kedzierska2025,
+  author  = {Kedzierska, Kasia Z. and Crawford, Lorin and Amini, Alexander P. and Lu, Alex X.},
+  title   = {Zero-shot evaluation reveals limitations of single-cell foundation models},
+  journal = {Genome Biology},
+  year    = {2025},
+  volume  = {26},
+  pages   = {101},
+  doi     = {10.1186/s13059-025-03574-x},
+  note    = {scGPT/Geneformer underperform simple baselines; no foundation model → clinical drug}
+}
+
+@article{Boltz2_2025,
+  author  = {Wohlwend, Jeremy and others},
+  title   = {{Boltz-2}: Towards Accurate and Efficient Binding Affinity Prediction},
+  journal = {bioRxiv},
+  year    = {2025},
+  doi     = {10.1101/2025.06.14.659707},
+  note    = {Near-FEP accuracy at >1000x speed; 20s on single GPU; outperformed CASP16}
+}
+
+@article{Wang2025Unlearn,
+  author  = {Wang, Daphne and Florian, Harald and Lynch, Stephen Y. and others},
+  title   = {Using {AI}-generated digital twins to boost clinical trial efficiency in {Alzheimer}'s disease},
+  journal = {Alzheimer's \& Dementia: Translational Research \& Clinical Interventions},
+  year    = {2025},
+  volume  = {11},
+  pages   = {e70181},
+  doi     = {10.1002/trc2.70181},
+  note    = {PROCOVA: EMA-qualified; 9-15\% sample reduction; CDR-SB 23\% control savings}
+}
+
+% ---------------------------------------------------------------------------
+% ROUND 2 — OoC, Regulatory, PBPK
+% ---------------------------------------------------------------------------
+
+@article{Yakavets2025,
+  author  = {Yakavets, Ilya and others},
+  title   = {Machine learning-guided exploration of multidrug regimens using microfluidic organoid arrays},
+  journal = {Science Advances},
+  year    = {2025},
+  doi     = {10.1126/sciadv.adt1851},
+  note    = {Closest published OoC-ML closed loop; sequential dosing reduces total drug at comparable efficacy}
+}
+
+@article{Hesperos2025DigitalTwin,
+  author  = {{Hesperos} and others},
+  title   = {Translation of a Human-Based Malaria-on-a-Chip Phenotypic Disease Model for In Vivo Applications},
+  journal = {Advanced Science},
+  year    = {2025},
+  doi     = {10.1002/advs.202505206},
+  note    = {First OoC-derived digital twin; multi-organ malaria chip; aligned with clinical data}
+}
+
+@article{Li2024PBPKML,
+  author  = {Li, X. and others},
+  title   = {Machine learning-integrated whole-body {PBPK} modeling for prediction of human pharmacokinetics},
+  journal = {Pharmaceutical Research},
+  year    = {2024},
+  doi     = {10.1007/s11095-024-03725-y},
+  note    = {ML+PBPK validated on 40 compounds: 65\% within 2-fold AUC (vs 47.5\% in vitro)}
+}
+
+@article{Folguera2024QSP,
+  author  = {Folguera-Blasco, Nuria and others},
+  title   = {Quantitative systems pharmacology and machine learning: a perspective on coupling approaches},
+  journal = {Frontiers in Systems Biology},
+  year    = {2024},
+  doi     = {10.3389/fsysb.2024.1380685},
+  note    = {AstraZeneca: QSP+ML "early stage"; no clinical validation; data mismatch unsolved}
+}
+
+% ---------------------------------------------------------------------------
+% ROUND 2 — LLM Agents, SDLs, Safety
+% ---------------------------------------------------------------------------
+
+@inproceedings{ScienceAgentBench2025,
+  author  = {OSU-NLP Group},
+  title   = {{ScienceAgentBench}: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year    = {2025},
+  note    = {102 tasks; best agent 32.4\% solved; chemistry agents have fundamental limitations}
+}
+
+@article{Urbina2022DualUse,
+  author  = {Urbina, Fabio and Lentzos, Filippa and Invernizzi, C\'{e}dric and Ekins, Sean},
+  title   = {Dual use of artificial-intelligence-powered drug discovery},
+  journal = {Nature Machine Intelligence},
+  year    = {2022},
+  volume  = {4},
+  pages   = {189--191},
+  doi     = {10.1038/s42256-022-00465-9},
+  note    = {Inverted MegaSyn: 40K toxic molecules in <6hrs; outputs included VX and worse}
+}
+
+@article{MicroCycle2024,
+  author  = {Novartis MicroCycle Team},
+  title   = {An Automated Platform for Rapid Hit-to-Lead Optimization via Miniaturized Assays},
+  journal = {Journal of Medicinal Chemistry},
+  year    = {2024},
+  volume  = {67},
+  pages   = {2118--2128},
+  note    = {100 compounds/cycle; best-documented pharma SDL; active learning-driven}
+}
+
+@article{AZ_PIP2024,
+  author  = {AstraZeneca},
+  title   = {Predictive Insight Platform: cloud-native modeling for the {DMTA} cycle},
+  journal = {Drug Discovery Today},
+  year    = {2024},
+  note    = {PMID: 38460568. ~250 models, >300M calculations/month}
+}
+
+@article{AppliedBioMath2023ADC,
+  author  = {Applied BioMath},
+  title   = {Virtual clinical trial simulations for antibody-drug conjugates in {HER2}+ breast cancer},
+  journal = {Journal of Pharmacokinetics and Pharmacodynamics},
+  year    = {2023},
+  doi     = {10.1007/s10928-023-09884-6},
+  note    = {QSP predicted PFS for T-DM1 and T-DXd including HER2 expression-dependent efficacy}
+}
+
+% ---------------------------------------------------------------------------
+% ROUND 3 DEEP DIVES (2026-04-04) — Gap Fixes
+% ---------------------------------------------------------------------------
+
+% --- Competitor Review ---
+@article{Hasselgren2024,
+  author  = {Hasselgren, Catrin and Oprea, Tudor I.},
+  title   = {Artificial Intelligence for Drug Discovery: Are We There Yet?},
+  journal = {Annual Review of Pharmacology and Toxicology},
+  year    = {2024},
+  volume  = {64},
+  doi     = {10.1146/annurev-pharmtox-022723-025340},
+  note    = {Direct competitor: skeptical framing. Must cite and differentiate}
+}
+
+% --- Investment & ROI ---
+@techreport{Deloitte2024ROI,
+  author      = {Deloitte},
+  title       = {Measuring the Return from Pharmaceutical Innovation 2024: 15th Annual Report},
+  year        = {2024},
+  institution = {Deloitte Centre for Health Solutions},
+  note        = {Cost per NME: \$2.23B; >100 months development; only 9\% significant AI ROI; 22\% scaled AI}
+}
+
+@article{JMIR2026VC,
+  author  = {Institutional Researchers},
+  title   = {Trends in Venture Capital Investment in {AI}-Driven Biopharmaceutical Startups},
+  journal = {Journal of Medical Internet Research},
+  year    = {2026},
+  note    = {JMIR 2026;e84968. Deal size \$0.19M→\$7.50M (2010-2024); AI share 0.25\%→21.85\%}
+}
+
+@techreport{RAND2025Cost,
+  author      = {RAND Corporation},
+  title       = {Drug Development Cost Estimates},
+  year        = {2025},
+  institution = {RAND},
+  note        = {Median \$708M, Mean \$1.31B per NME (range \$318M-\$2.8B)}
+}
+
+% --- Complex Modalities ---
+@article{Crooke2021ASO,
+  author  = {Crooke, Stanley T. and Baker, Brenda F. and Crooke, Rosanne M. and Liang, Xue-hai},
+  title   = {Antisense technology: an overview and prospectus},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2021},
+  volume  = {20},
+  pages   = {427--453},
+  doi     = {10.1038/s41573-021-00162-z},
+  note    = {9 ASO drugs approved; hepatotoxicity via DBHS protein binding; not predictable from sequence}
+}
+
+@article{Morreale2024bRo5,
+  author  = {Morreale, Francesca E. and others},
+  title   = {Beyond Rule of Five and {PROTACs} in Modern Drug Discovery},
+  journal = {Journal of Medicinal Chemistry},
+  year    = {2024},
+  volume  = {67},
+  number  = {6},
+  doi     = {10.1021/acs.jmedchem.3c02332},
+  note    = {Standard ADMET models systematically under-predict for bRo5; PROTAC permeability uncorrelated with standard predictors}
+}
+
+@article{Capecchi2019Lipinski,
+  author  = {Capecchi, Alice and Probst, Daniel and Reymond, Jean-Louis},
+  title   = {{PubChem} and {ChEMBL} beyond {Lipinski}},
+  journal = {Molecular Informatics},
+  year    = {2019},
+  volume  = {38},
+  number  = {5},
+  pages   = {1900016},
+  doi     = {10.1002/minf.201900016},
+  note    = {ChEMBL ~9.2\% non-Lipinski; PubChem ~7.6\%. >90\% ML training data is Ro5-compliant}
+}
+
+@article{ADCNet2025,
+  author  = {ADCNet Team},
+  title   = {{ADCNet}: a unified framework for predicting the activity of antibody-drug conjugates},
+  journal = {Briefings in Bioinformatics},
+  year    = {2025},
+  volume  = {26},
+  number  = {3},
+  pages   = {bbaf228},
+  note    = {87.12\% accuracy, AUROC 0.93; integrates ESM-2 and FG-BERT for all 5 ADC components}
+}
+
+% --- Federated Learning ---
+@article{MELLODDY2024,
+  author  = {MELLODDY Consortium},
+  title   = {Federated Multitask Learning for Drug Discovery across Ten Pharmaceutical Companies},
+  journal = {Journal of Chemical Information and Modeling},
+  year    = {2024},
+  note    = {10 pharma, 2.6B data points, 21M molecules, 40K assays; AUC-PR +4-12.5\%, R2 +2-4.8\%}
+}
+
+@article{FLuID2025,
+  author  = {FLuID Consortium},
+  title   = {Data-driven federated learning in drug discovery with knowledge distillation},
+  journal = {Nature Machine Intelligence},
+  year    = {2025},
+  volume  = {7},
+  pages   = {423--436},
+  note    = {8 pharma companies; federated distillation for privacy-preserving knowledge sharing}
+}
+
+% --- Benchmarks ---
+@misc{Polaris2024,
+  author  = {Novartis and others},
+  title   = {Polaris: A Cross-Industry Benchmarking Platform for {ML} in Drug Discovery},
+  year    = {2024},
+  note    = {Launched ICML 2024; AZ, Pfizer, Merck, Relay, Recursion, J\&J, Bayer; pretrained models underperform expectations}
+}
+
+@misc{CACHE2024,
+  author  = {CACHE Challenge Organizers},
+  title   = {{CACHE}: Critical Assessment of Computational Hit-finding Experiments},
+  year    = {2024},
+  note    = {Challenge \#1 (LRRK2): 23 teams, 1955 predicted molecules, 73 confirmed binders (3.7\% hit rate)}
+}
+
+% --- AI Drug Failure Analysis ---
+@misc{CAS2023DSP1181,
+  author  = {Wills, Todd},
+  title   = {Assessing the First {AI}-Designed Drug Candidates to Go into Human Clinical Trials},
+  year    = {2023},
+  institution = {CAS (Chemical Abstracts Service)},
+  note    = {DSP-1181 molecules: 58\% match haloperidol shape; "lack structural diversity"}
+}
+
+@article{Shi2023PIKfyve,
+  author  = {Shi, Yang and others},
+  title   = {{PIKfyve} inhibition mitigates disease in models of diverse forms of {ALS}},
+  journal = {Cell},
+  year    = {2023},
+  doi     = {10.1016/j.cell.2023.01.005},
+  note    = {Verge CONVERGE platform; PIKfyve inhibition promotes pTDP-43 exocytosis; extended survival of patient-derived motor neurons}
+}
+
+% --- Lab Standards ---
+@article{Wise2019FAIR,
+  author  = {Wise, John and de Barron, Alexandra Grebe and Splendiani, Andrea and others},
+  title   = {Implementation and relevance of {FAIR} data principles in biopharmaceutical {R\&D}},
+  journal = {Drug Discovery Today},
+  year    = {2019},
+  volume  = {24},
+  number  = {4},
+  pages   = {933--938},
+  doi     = {10.1016/j.drudis.2019.01.008},
+  note    = {Pistoia Alliance; <20\% pharma data FAIR-compliant; 80\% scientist time on data wrangling}
+}
+
+% --- GNN Review ---
+@article{GNN_ChemRev2025,
+  author  = {Various},
+  title   = {Graph Neural Networks in Modern {AI}-Aided Drug Discovery},
+  journal = {Chemical Reviews},
+  year    = {2025},
+  volume  = {125},
+  pages   = {10001--10103},
+  note    = {~100-page GNN review for AIDD; relevant to pipeline architecture and black box problem}
+}
+
+% ===========================================================================
+% ROUND 4: Critical Thesis Defense — Added 2026-04-04
+% ===========================================================================
+
+% --- Phase II Statistics & Temporal Confound ---
+@article{Dowden2019,
+  author  = {Dowden, Helen and Munro, Jamie},
+  title   = {Trends in clinical success rates and therapeutic focus},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2019},
+  volume  = {18},
+  pages   = {495--496},
+  doi     = {10.1038/d41573-019-00074-z},
+  note    = {Phase II→III improved from 49-50\% (2010-12) to 61-63\% (2015-17); temporal baseline shift}
+}
+
+@article{Eder2014,
+  author  = {Eder, Jörg and Sedrani, Richard and Wiesmann, Christian},
+  title   = {The discovery of first-in-class drugs: origins and evolution},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2014},
+  volume  = {13},
+  number  = {8},
+  pages   = {577--587},
+  doi     = {10.1038/nrd4336},
+  note    = {First-in-class drugs have lower approval rates than followers}
+}
+
+@article{Paul2010,
+  author  = {Paul, Steven M. and Mytelka, Daniel S. and Dunwiddie, Christopher T. and Persinger, Charles C. and Munos, Bernard H. and Lindborg, Stacy R. and Schacht, Aaron L.},
+  title   = {How to improve {R\&D} productivity: the pharmaceutical industry's grand challenge},
+  journal = {Nature Reviews Drug Discovery},
+  year    = {2010},
+  volume  = {9},
+  number  = {3},
+  pages   = {203--214},
+  doi     = {10.1038/nrd3078},
+  note    = {Each percentage point of Phase II improvement = \$800M+ economic impact}
+}
+
+@article{Scannell2016,
+  author  = {Scannell, Jack W. and Bosley, Jim},
+  title   = {When Quality Beats Quantity: Decision Theory, Drug Discovery, and the Reproducibility Crisis},
+  journal = {PLoS ONE},
+  year    = {2016},
+  volume  = {11},
+  number  = {2},
+  pages   = {e0147215},
+  doi     = {10.1371/journal.pone.0147215},
+  note    = {0.1 correlation improvement offsets 10-100x screening throughput}
+}
+
+% --- AI Molecular Novelty ---
+@article{JCIM2025Novelty,
+  author  = {Various},
+  title   = {{AI}-Designed Molecules in Drug Discovery: Structural Novelty Evaluation and Implications},
+  journal = {Journal of Chemical Information and Modeling},
+  year    = {2025},
+  volume  = {65},
+  number  = {17},
+  pages   = {8924--8933},
+  note    = {71 AI molecules: ligand-based 58.1\% Tcmax>0.4 (low novelty); structure-based 17.9\% (more novel)}
+}
+
+@article{Polykovskiy2020,
+  author  = {Polykovskiy, Daniil and Zhebrak, Alexander and Sanchez-Lengeling, Benjamin and Gober, Sergey and Zhavoronkov, Alex and others},
+  title   = {Molecular Sets ({MOSES}): A Benchmarking Platform for Molecular Generation Models},
+  journal = {Frontiers in Pharmacology},
+  year    = {2020},
+  volume  = {11},
+  pages   = {565644},
+  doi     = {10.3389/fphar.2020.565644},
+  note    = {MOSES benchmark; novelty metric = string novelty not structural novelty}
+}
+
+@article{WaltersMurcko2020,
+  author  = {Walters, W. Patrick and Murcko, Mark},
+  title   = {Assessing the impact of generative {AI} on medicinal chemistry},
+  journal = {Nature Biotechnology},
+  year    = {2020},
+  volume  = {38},
+  number  = {2},
+  pages   = {143--145},
+  doi     = {10.1038/s41587-020-0418-2},
+  note    = {Generative models produce close structural analogs of known actives; novelty overstated}
+}
+
+% --- PoseBusters & Benchmark Inflation ---
+@article{Buttenschoen2024,
+  author  = {Buttenschoen, Martin and Morris, Garrett M. and Deane, Charlotte M.},
+  title   = {{PoseBusters}: {AI}-based docking methods fail to generate physically valid ligand poses},
+  journal = {Chemical Science},
+  year    = {2024},
+  volume  = {15},
+  number  = {9},
+  pages   = {3130--3139},
+  doi     = {10.1039/D3SC04185A},
+  note    = {DiffDock, EquiBind, TankBind generate physically invalid poses; no DL method beats AutoDock Vina on validity}
+}
+
+@article{Guo2024ScaffoldSplits,
+  author  = {Guo, Qianwen and Hernandez-Hernandez, Saiveth and Ballester, Pedro J.},
+  title   = {Scaffold Splits Overestimate Virtual Screening Performance},
+  journal = {arXiv},
+  year    = {2024},
+  eprint  = {2406.00873},
+  note    = {Accepted ICANN 2024; Bemis-Murcko splits introduce unrealistically high train-test similarities}
+}
+
+% --- bRo5 ADMET (Fix: was Morreale, actually Price et al.) ---
+@article{Price2024bRo5,
+  author  = {Price, David A. and Weinheimer, Scott P. and Rivkin, Alexei and Jenkins, Thomas J. and Nijsen, Mirjam J.F.M. and Cox, Philip B. and DeGoey, David A.},
+  title   = {Beyond the Rule of 5: Lessons Learned from {AbbVie}'s Drugs and Compound Collection},
+  journal = {Journal of Medicinal Chemistry},
+  year    = {2024},
+  volume  = {67},
+  number  = {7},
+  pages   = {5683--5698},
+  doi     = {10.1021/acs.jmedchem.3c02332},
+  note    = {Standard ADMET predictors show NO correlation for PROTAC permeability; chameleonic behavior; new descriptors needed}
+}
+
+% --- OoC Roadblocks & GAO ---
+@article{Alver2024OoCRoadblocks,
+  author  = {Alver, C. Grace and Drabbe, Emma and Ishahak, Matthew and Agarwal, Ashutosh},
+  title   = {Roadblocks confronting widespread dissemination and deployment of Organs on Chips},
+  journal = {Nature Communications},
+  year    = {2024},
+  volume  = {15},
+  pages   = {5118},
+  doi     = {10.1038/s41467-024-48864-3},
+  note    = {Fundamental design and process features preventing widespread OoC adoption}
+}
+
+@techreport{GAO2025OoC,
+  author  = {{U.S. Government Accountability Office}},
+  title   = {Human Organ-on-a-Chip: Technologies Offer Benefits Over Animal Testing but Challenges Limit Wider Adoption},
+  number  = {GAO-25-107335},
+  year    = {2025},
+  month   = may,
+  note    = {Only 10-20\% of purchased human cells are high quality enough for OoC; systemic limitations}
+}
+
+% --- PDO + ML (More mature alternative) ---
+@article{PharmaFormer2025,
+  author  = {Various},
+  title   = {{PharmaFormer}: a transformer-based model for organoid drug response prediction},
+  journal = {npj Precision Oncology},
+  year    = {2025},
+  doi     = {10.1038/s41698-025-01082-6},
+  note    = {Pre-trained on 2D cell lines, fine-tuned on organoid pharmacogenomics; validated against TCGA clinical outcomes}
+}
+
+@article{OPTIC2025,
+  author  = {Various},
+  title   = {Patient-Derived Organoids Predict Treatment Response and Survival in Colorectal Cancer},
+  journal = {Clinical Cancer Research},
+  year    = {2025},
+  volume  = {31},
+  number  = {23},
+  pages   = {5015},
+  note    = {Multicenter prospective; PDOs predict radiological response AND survival for oxaliplatin in mCRC}
+}
+
+% --- Walters ML Criticism ---
+@article{Walters2024NatMachIntell,
+  author  = {Walters, W. Patrick and Barzilay, Regina},
+  title   = {Critical assessment of {AI} in drug discovery},
+  journal = {Nature Machine Intelligence},
+  year    = {2024},
+  volume  = {6},
+  pages   = {1346--1348},
+  note    = {Growing gap between perceived progress and real-world impact; called for industry-led critical assessment}
+}
+
+% --- Leakage Quantification ---
+@article{OxfordLeakage2025,
+  author  = {Various},
+  title   = {Data leakage inflates performance in structure-based drug design benchmarks},
+  journal = {Briefings in Bioinformatics},
+  year    = {2025},
+  volume  = {26},
+  number  = {2},
+  note    = {Data leakage inflates pose RMSD<2\AA\ by 20-60\% and binding affinity R by 0.15-0.30}
+}

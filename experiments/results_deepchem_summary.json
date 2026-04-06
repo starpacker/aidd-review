@@ -1,0 +1,6 @@
+{
+  "pipeline": "DeepChem (200 RDKit descriptors + RandomForest)",
+  "silhouette_score": 0.0435,
+  "loo_auc_approved_vs_rest": 0.7865,
+  "loo_auc_approved_vs_failures": 0.5313
+}

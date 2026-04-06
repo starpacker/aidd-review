@@ -1,0 +1,32 @@
+# Local Claude Code config
+CLAUDE.local.md
+.claude/settings.local.json
+.claude.json
+.claude/
+
+# Papers (large PDFs, don't track in git)
+papers/*.pdf
+
+# Generated figures (regenerate from scripts)
+figures/*.png
+figures/*.svg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv38/
+*.tmp
+*.log
+
+# Large cloned repos (regenerate via git clone)
+DruGUI/
+ChemMCP/
+ChemMCP2/
+
+# Archived experiments
+experiments/_archive/
