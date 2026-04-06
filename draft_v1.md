@@ -36,7 +36,7 @@ The contemporary AI-driven drug discovery pipeline comprises a series of computa
 
 ### Target identification and validation
 
-Modern target identification leverages knowledge graphs, multi-omics integration, and genome-wide association studies (GWAS) to nominate disease-relevant proteins. The implicit assumption is that statistical association implies causality and, critically, druggability. Neither assumption holds reliably. GWAS hits frequently implicate non-coding regions, protein complexes, or redundant pathway nodes that resist pharmacological intervention. Even when a causal gene is identified, the protein product may lack a tractable binding pocket, exist in an undruggable conformation, or function primarily through protein–protein interactions that small molecules cannot easily disrupt. Network-based approaches attempt to address this by scoring targets on topological centrality, but centrality in a knowledge graph does not equate to therapeutic leverage in a living system. The consequence is that AI-nominated targets enter the pipeline carrying an unquantified risk of being fundamentally intractable — a risk that compounds at every downstream stage.
+Modern target identification leverages knowledge graphs, multi-omics integration, and genome-wide association studies (GWAS) to nominate disease-relevant proteins. The implicit assumption is that statistical association implies causality and, critically, druggability. Neither assumption holds reliably. GWAS hits frequently implicate non-coding regions, protein complexes, or redundant pathway nodes that resist pharmacological intervention. Even when a causal gene is identified, the protein product may lack a tractable binding pocket, exist in an undruggable conformation, or function primarily through protein–protein interactions that small molecules cannot easily disrupt. Network-based approaches attempt to address this by scoring targets on topological centrality, but centrality in a knowledge graph does not equate to therapeutic leverage in a living system [42]. The consequence is that AI-nominated targets enter the pipeline carrying an unquantified risk of being fundamentally intractable — a risk that compounds at every downstream stage.
 
 ### Protein structure prediction
 
@@ -44,7 +44,7 @@ AlphaFold2 [6] and its successor AlphaFold3 [7] have transformed structural biol
 
 ### Virtual screening and molecular docking
 
-With a predicted structure in hand, the pipeline proceeds to virtual screening, docking millions of compounds against the target binding site. Scoring functions used in standard docking protocols assume a largely rigid receptor, treat solvation effects approximately, and neglect the entropic costs of constraining a flexible ligand within a binding pocket. These simplifications are computationally necessary but pharmacologically consequential. Experimental hit rates from structure-based virtual screening campaigns remain in the range of 1–5%, meaning that 95–99% of computationally prioritized compounds fail upon experimental testing. Free energy perturbation methods offer greater physical rigour but remain too computationally expensive for routine application across large libraries. The result is that virtual screening functions as a coarse filter rather than a precision tool, and the compounds it promotes carry substantial false-positive risk into subsequent optimization stages.
+With a predicted structure in hand, the pipeline proceeds to virtual screening, docking millions of compounds against the target binding site. Scoring functions used in standard docking protocols assume a largely rigid receptor, treat solvation effects approximately, and neglect the entropic costs of constraining a flexible ligand within a binding pocket. These simplifications are computationally necessary but pharmacologically consequential. Experimental hit rates from structure-based virtual screening campaigns remain in the range of 1–5% [43], meaning that 95–99% of computationally prioritized compounds fail upon experimental testing. Free energy perturbation methods offer greater physical rigour but remain too computationally expensive for routine application across large libraries. The result is that virtual screening functions as a coarse filter rather than a precision tool, and the compounds it promotes carry substantial false-positive risk into subsequent optimization stages.
 
 ### Binding site prediction and therapeutic relevance
 
@@ -82,7 +82,7 @@ But "faster to clinic" is not "more likely to work in clinic" [1]. Phase I measu
 
 ## 4. The Biology Problem: Where AI Fails
 
-The achievements described in Section 3 are genuine and significant. Yet they illuminate a troubling asymmetry: AI has demonstrably improved the *chemistry* of drug discovery — designing molecules that are safer, more selective, and more drug-like — while leaving the *biology* of clinical efficacy essentially untouched. This section examines that asymmetry in detail, not to diminish AI's contribution, but because the failure modes that drive Phase II attrition have received far less systematic analysis than the successes. Understanding why excellent molecules fail as medicines is prerequisite to the next generation of AIDD.
+The preceding section documented genuine AI achievements in molecular design. This section examines the other side of the ledger: the failure modes that drive Phase II attrition, which have received far less systematic analysis than the successes. We focus on four high-profile AI drug failures, each illustrating a distinct biological failure mode that current computational models are structurally unable to anticipate.
 
 ### 4.1 The Phase II efficacy wall
 
@@ -98,7 +98,16 @@ Four case studies illustrate the distinct biological failure modes that current 
 
 **Exscientia/Sumitomo DSP-1181: speed ≠ viability.** DSP-1181, a 5-HT1A agonist for OCD, was among the first AI-designed drugs to enter clinical trials, celebrated for a 12-month discovery timeline versus the typical 4–6 years [16]. Phase I completed with favorable safety. The compound was subsequently discontinued without entering Phase II, for undisclosed reasons. The case illustrates a broader concern: AI's efficiency gains in the design phase do not reduce the biological uncertainty that determines clinical success. Compressing discovery from five years to one year saves time and money, but it does not change the probability that the target hypothesis is correct.
 
-These four cases represent four distinct failure modes — target hypothesis (BEN-2293), therapeutic index (EXS-21546), surrogate endpoint validity (REC-994), and undisclosed biological reasons (DSP-1181) — reinforcing that the Biology Problem is not a single missing capability but a family of prediction failures that current computational models are structurally unable to address (Table 2).
+These four cases represent four distinct failure modes (Table 2), reinforcing that the Biology Problem is not a single missing capability but a family of prediction failures that current computational models are structurally unable to address.
+
+**Table 2. AI drug failure modes and their computational detectability.**
+
+| Drug | Company | Failure Mode | AI Performance | Computationally Detectable? |
+|------|---------|:---:|:---:|:---:|
+| BEN-2293 | BenevolentAI | Target hypothesis | Safe, on-target | No: pathway redundancy |
+| EXS-21546 | Exscientia | Therapeutic index | Potent, selective | No: human PK/PD window |
+| REC-994 | Recursion | Surrogate endpoint | MRI signal (NS) | No: endpoint validity |
+| DSP-1181 | Exscientia/Sumitomo | Undisclosed | Safe (Phase I) | Unknown |
 
 ### 4.2 The cascading valley of death
 
@@ -325,3 +334,7 @@ The gap between benchmarks and bedside is not a failure of artificial intelligen
 [40] Ding Y, et al. Explainable AI in drug discovery and development. *Drug Design, Development and Therapy*. 2025.
 
 [41] Lavecchia A. Explainable AI for drug discovery. *WIREs Computational Molecular Science*. 2025.
+
+[42] Barabási A-L, Gulbahce N, Loscalzo J. Network medicine: a network-based approach to human disease. *Nature Reviews Genetics*. 2011;12(1):56–68.
+
+[43] Lyu J, Wang S, Balius TE, et al. Ultra-large library docking for discovering new chemotypes. *Nature*. 2019;566:224–229.

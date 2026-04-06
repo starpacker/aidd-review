@@ -1,7 +1,7 @@
 # Experiment Progress & Next Steps
 
-> **Updated**: 2026-04-06 19:15
-> **Status**: Phase 1 完成, Phase 2 完成 (4/6 系统), 进入论文写作阶段
+> **Updated**: 2026-04-07 02:30
+> **Status**: Phase 1-2 完成, Phase 3 (初稿) 完成, 进入修订阶段
 
 ---
 
@@ -48,28 +48,45 @@
 
 ---
 
+## 已完成工作
+
+### Phase 3: 论文初稿 ✅ (2026-04-07)
+
+- [x] **draft_v1.md**: 完整初稿, ~8,100 词, 7 个章节 + 摘要 + 41 条参考文献
+- [x] **6 张论文图表**: `figures/gen_paper_figures.py` 生成
+  - Fig 1: Precision Paradox (Phase I/II 对比)
+  - Fig 2: Pipeline 假设 vs 生物学现实
+  - Fig 3: Cascading Valley of Death
+  - Fig 4: Goodhart Gradient (核心实证发现)
+  - Fig 5: Integration Framework (三层方案)
+  - Fig 6: Strategic Timeline 2020-2030
+- [x] **Table 1**: 2D / Animal / OoC 对比 (内嵌 Section 6.1)
+- [x] **Table 3**: 跨系统实证评估 (内嵌 Section 5.3)
+- [x] **GitHub**: https://github.com/starpacker/aidd-review
+
+---
+
 ## 下一步工作
 
-### 高优先级 — 论文写作
+### 高优先级 — Phase 4: 修订 & 完善
 
-- [ ] **Draft Section 5.3**: 整合 Phase 2 数据, 用 Goodhart 梯度作为核心论证
-- [ ] **更新 Figure 计划**: 将 `fig_phase2_goodhart_gradient` 定为论文主图之一
-- [ ] **Draft Section 4**: 整合 42% 不可见失败 + 级联衰减数据
+- [ ] **Self-review**: 逻辑连贯性, 论证一致性, 缺失引用, 冗余
+- [ ] **引用检查**: 交叉验证所有 41 条参考文献, 确保 DOI 正确
+- [ ] **补充引用**: 目前 41 条, 目标 100-150 条 (每节补充)
+- [ ] **语言润色**: Nature 级别英语, 主动语态, 无填充词
+- [ ] **图表优化**: 发布质量 (考虑 BioRender 替代 matplotlib 概念图)
 
 ### 中优先级 — 补充实验
 
 - [ ] **ADMET-AI**: 在更大内存机器 (≥32GB) 上运行 `test_admet_ai_system.py`
-  - 已安装 `admet-ai 2.0.1` 在 `pymol_env`
-  - 输入文件已准备: `admet_input.csv`
 - [ ] **ClinTox 数据集扩展**: 从 1,491 分子中系统抽样, 增加统计效力
-  - 脚本: `build_clintox_dataset.py` (待写)
-  - 数据源: `dc.molnet.load_clintox()`
-
-### 低优先级 — 额外工作
-
-- [ ] **ChemMCP**: 源码已 clone 到 `ChemMCP2/`, 但依赖 torch + transformers
 - [ ] **重复实验**: 用不同 temperature 运行 LLM 评估, 检验稳定性
-- [ ] **更多 Agent 系统**: AgentD, RepurAgent (需 GPU)
+
+### 低优先级
+
+- [ ] **Cover letter**: 投稿封面信
+- [ ] **格式化**: 按期刊要求格式化 (结构化摘要, 参考文献格式)
+- [ ] **补充材料**: 实验细节, 数据集描述, 完整统计结果
 
 ---
 
