@@ -5,6 +5,7 @@ Compares all agent systems on their ability to distinguish:
 """
 
 import json
+import math
 import os
 import numpy as np
 from collections import defaultdict
@@ -127,7 +128,7 @@ def mann_whitney_u(x, y):
         return u, 1.0
     z = abs(u - mu) / sigma
     # Two-tailed p-value approximation
-    p = 2 * (1 - 0.5 * (1 + np.math.erf(z / np.sqrt(2))))
+    p = 2 * (1 - 0.5 * (1 + math.erf(z / math.sqrt(2))))
     return u, p
 
 
