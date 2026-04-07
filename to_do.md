@@ -34,17 +34,20 @@
 | Goodhart 定量 | `analysis_goodhart_effect.py` | QED r=-0.38, ADMET r=-0.43 |
 | Phase 2 跨系统 | `analysis_phase2.py` | `results_phase2_summary.json` |
 | Phase 2 图表 | `gen_phase2_figures.py` | 5 张图表 (PNG+PDF) |
+| **最终统计** | `analysis_final.py` | `results_final_stats.json` (scipy + bootstrap CIs) |
 
 ---
 
 ## 核心发现 (论文可用)
 
-1. **Goodhart 梯度效应**: 纯 LLM → LLM+Tools → Pipeline, 计算指标依赖越深, 排名越偏离临床实际
+1. **Goodhart 梯度效应**: 纯 LLM → LLM+Tools → Pipeline, 计算指标依赖越深, 排名越偏离临床实际 (ρ=-0.80)
 2. **纯 LLM 唯一正确**: Claude 4.6 Opus 无工具时 A > B > C, 所有工具/pipeline 系统均反转
-3. **工具增强悖论**: LLM+Tools AUC=0.948 (最强判别) 但 C > B (Goodhart 偏差)
-4. **DruGUI AUC(A vs C)=0.24**: 低于随机, pipeline 主动偏好 decoy
-5. **42% 临床失败不可见**: 5/12 失败药物通过所有计算筛选
-6. **3 个 bug 才能运行 DruGUI**: wget/import/API 兼容问题 → pipeline 脆弱性证据
+3. **工具增强悖论**: LLM+Tools AUC=0.948 [0.85, 1.00] (最强判别) 但 C > B (Goodhart 偏差)
+4. **ADMET Proxy AUC(A vs C)=0.069**: 极端反转, 近乎确定地偏好 decoy 而非 FDA 批准药物
+5. **DruGUI AUC(A vs C)=0.243**: 低于随机, pipeline 主动偏好 decoy
+6. **失败检测悖论**: 92% 临床失败被标记 (11/12), 但基于错误理由 (drug-likeness 而非生物学机制)
+7. **DSP-1181 唯一隐身**: 唯一通过所有计算筛选的临床失败药物
+8. **3 个 bug 才能运行 DruGUI**: wget/import/API 兼容问题 → pipeline 脆弱性证据
 
 ---
 
@@ -53,15 +56,15 @@
 ### Phase 3: 论文初稿 ✅ (2026-04-07)
 
 - [x] **draft_v1.md**: 完整初稿, ~8,100 词, 7 个章节 + 摘要 + 41 条参考文献
-- [x] **6 张论文图表**: `figures/gen_paper_figures.py` 生成
+- [x] **6 张论文图表**: `figures/gen_paper_figures.py` 生成 (已更新含 ADMET Proxy + 95% CI)
   - Fig 1: Precision Paradox (Phase I/II 对比)
   - Fig 2: Pipeline 假设 vs 生物学现实
   - Fig 3: Cascading Valley of Death
-  - Fig 4: Goodhart Gradient (核心实证发现)
+  - Fig 4: Goodhart Gradient (5 系统 + bootstrap CI error bars)
   - Fig 5: Integration Framework (三层方案)
   - Fig 6: Strategic Timeline 2020-2030
 - [x] **Table 1**: 2D / Animal / OoC 对比 (内嵌 Section 6.1)
-- [x] **Table 3**: 跨系统实证评估 (内嵌 Section 5.3)
+- [x] **Table 3**: 跨系统实证评估 5 系统 + 95% CI (内嵌 Section 5.3)
 - [x] **GitHub**: https://github.com/starpacker/aidd-review
 
 ---
@@ -78,9 +81,13 @@
 
 ### 中优先级 — 补充实验
 
-- [ ] **ADMET-AI**: 在更大内存机器 (≥32GB) 上运行 `test_admet_ai_system.py`
+- [ ] **ADMET-AI** ⚠️ 需要服务器: 在 ≥32GB RAM 机器运行 `test_admet_ai_system.py` (本地 PyTorch OOM)
+  - 需要: `pip install admet-ai torch>=2.0` + GPU 推荐
+  - 预期: 增加第 6 个系统 (Chemprop GNN), 验证 Goodhart gradient 是否延续
+- [ ] **ChemMCP** ⚠️ 需要服务器: 依赖过重 (UniProt API, PDB fetch, docking), 需要完整环境
 - [ ] **ClinTox 数据集扩展**: 从 1,491 分子中系统抽样, 增加统计效力
 - [ ] **重复实验**: 用不同 temperature 运行 LLM 评估, 检验稳定性
+- [ ] **Bootstrap 重复**: 对 LLM 评估增加 n=3 重复, 计算 inter-run variance
 
 ### 低优先级
 

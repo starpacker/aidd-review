@@ -1,0 +1,597 @@
+{
+  "analysis_date": "2026-04-07",
+  "dataset": "36 molecules (12 approved, 12 failures, 12 decoys)",
+  "statistical_methods": {
+    "auc": "Mann-Whitney U statistic via scipy.stats.mannwhitneyu",
+    "ci": "Bootstrap 95% CI (n=10,000 iterations, seed=42)",
+    "effect_size": "Cohen's d (pooled SD)",
+    "correlation": "Spearman rank correlation",
+    "omnibus": "Kruskal-Wallis H test"
+  },
+  "systems": [
+    {
+      "name": "Direct LLM",
+      "n_total": 36,
+      "n_missing": 0,
+      "score_key": "overall_score",
+      "A_approved": {
+        "n": 12,
+        "mean": 5.816666666666667,
+        "std": 1.1730560967236845,
+        "sem": 0.33863212660897546,
+        "median": 5.85,
+        "min": 2.9,
+        "max": 7.2,
+        "iqr": 1.3499999999999996
+      },
+      "B_clinical_failure": {
+        "n": 12,
+        "mean": 5.4416666666666655,
+        "std": 1.0439943689619415,
+        "sem": 0.30137521497631525,
+        "median": 5.449999999999999,
+        "min": 3.5,
+        "max": 7.7,
+        "iqr": 1.0499999999999998
+      },
+      "C_decoy": {
+        "n": 12,
+        "mean": 5.083333333333334,
+        "std": 0.6589707309451796,
+        "sem": 0.19022846444964195,
+        "median": 5.2,
+        "min": 3.5,
+        "max": 6.2,
+        "iqr": 0.25
+      },
+      "ranking": "A > B > C",
+      "correct_ranking": true,
+      "AUC_A_vs_B": {
+        "auc": 0.6423611111111112,
+        "U": 92.5,
+        "p": 0.24769846042810106,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.4027777777777778,
+          0.8611111111111112
+        ]
+      },
+      "AUC_A_vs_C": {
+        "auc": 0.7951388888888888,
+        "U": 114.5,
+        "p": 0.014522443209199834,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.5798611111111112,
+          0.9652777777777778
+        ]
+      },
+      "AUC_B_vs_C": {
+        "auc": 0.625,
+        "U": 90.0,
+        "p": 0.3052786754737331,
+        "n1": 12,
+        "n2": 12
+      },
+      "cohens_d_A_vs_B": 0.3377155543408685,
+      "cohens_d_A_vs_C": 0.7707983649478742,
+      "kruskal_wallis": {
+        "H": 5.784469696969713,
+        "p": 0.055452146882625
+      },
+      "spearman_vs_clinical": {
+        "rho": 0.4062851716376573,
+        "p": 0.013941148814234097
+      }
+    },
+    {
+      "name": "LLM+Tools Agent",
+      "n_total": 36,
+      "n_missing": 0,
+      "score_key": "overall_score",
+      "A_approved": {
+        "n": 12,
+        "mean": 8.283333333333333,
+        "std": 0.7505553499465136,
+        "sem": 0.21666666666666673,
+        "median": 8.35,
+        "min": 6.5,
+        "max": 9.0,
+        "iqr": 0.9000000000000004
+      },
+      "B_clinical_failure": {
+        "n": 12,
+        "mean": 4.941666666666667,
+        "std": 1.9933791927429678,
+        "sem": 0.5754390067635757,
+        "median": 4.15,
+        "min": 2.5,
+        "max": 8.2,
+        "iqr": 2.8000000000000007
+      },
+      "C_decoy": {
+        "n": 12,
+        "mean": 5.691666666666666,
+        "std": 1.3647899161231793,
+        "sem": 0.39398091273050223,
+        "median": 5.65,
+        "min": 3.2,
+        "max": 8.2,
+        "iqr": 1.4249999999999998
+      },
+      "ranking": "A > C > B",
+      "correct_ranking": false,
+      "AUC_A_vs_B": {
+        "auc": 0.9479166666666666,
+        "U": 136.5,
+        "p": 0.00019971385995806167,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.8472222222222222,
+          1.0
+        ]
+      },
+      "AUC_A_vs_C": {
+        "auc": 0.9513888888888888,
+        "U": 137.0,
+        "p": 0.00018148058830220047,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.8506944444444444,
+          1.0
+        ]
+      },
+      "AUC_B_vs_C": {
+        "auc": 0.375,
+        "U": 54.0,
+        "p": 0.31042058002991546,
+        "n1": 12,
+        "n2": 12
+      },
+      "cohens_d_A_vs_B": 2.2187011631114193,
+      "cohens_d_A_vs_C": 2.353152637982232,
+      "kruskal_wallis": {
+        "H": 19.48891120324783,
+        "p": 5.8618770227296975e-05
+      },
+      "spearman_vs_clinical": {
+        "rho": 0.5799648854689,
+        "p": 0.00020948926371035036
+      }
+    },
+    {
+      "name": "DruGUI Pipeline",
+      "n_total": 36,
+      "n_missing": 0,
+      "score_key": "composite_score",
+      "A_approved": {
+        "n": 12,
+        "mean": 0.5565416666666667,
+        "std": 0.09384469237990388,
+        "sem": 0.027090629203777566,
+        "median": 0.5636,
+        "min": 0.3006,
+        "max": 0.7167,
+        "iqr": 0.03717499999999996
+      },
+      "B_clinical_failure": {
+        "n": 12,
+        "mean": 0.4962416666666667,
+        "std": 0.09532039234586531,
+        "sem": 0.02751662709007304,
+        "median": 0.51285,
+        "min": 0.313,
+        "max": 0.6106,
+        "iqr": 0.113875
+      },
+      "C_decoy": {
+        "n": 12,
+        "mean": 0.5919,
+        "std": 0.03276694565065117,
+        "sem": 0.009459002445962646,
+        "median": 0.6019,
+        "min": 0.492,
+        "max": 0.6157,
+        "iqr": 0.017100000000000004
+      },
+      "ranking": "C > A > B",
+      "correct_ranking": false,
+      "AUC_A_vs_B": {
+        "auc": 0.6666666666666666,
+        "U": 96.0,
+        "p": 0.1748533068932927,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.4236111111111111,
+          0.8888888888888888
+        ]
+      },
+      "AUC_A_vs_C": {
+        "auc": 0.24305555555555555,
+        "U": 35.0,
+        "p": 0.03508911609404786,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.027777777777777776,
+          0.4722222222222222
+        ]
+      },
+      "AUC_B_vs_C": {
+        "auc": 0.1388888888888889,
+        "U": 20.0,
+        "p": 0.002945646150532981,
+        "n1": 12,
+        "n2": 12
+      },
+      "cohens_d_A_vs_B": 0.6375189725656256,
+      "cohens_d_A_vs_C": -0.5030571707309957,
+      "kruskal_wallis": {
+        "H": 10.409909909909913,
+        "p": 0.005489297701020555
+      },
+      "spearman_vs_clinical": {
+        "rho": -0.33404043405404016,
+        "p": 0.04646807138804035
+      }
+    },
+    {
+      "name": "RDKit Pipeline",
+      "n_total": 36,
+      "n_missing": 0,
+      "score_key": "composite_score",
+      "A_approved": {
+        "n": 12,
+        "mean": 0.7243083333333334,
+        "std": 0.18128582885163486,
+        "sem": 0.052332711043877905,
+        "median": 0.77715,
+        "min": 0.3404,
+        "max": 0.8862,
+        "iqr": 0.14495000000000002
+      },
+      "B_clinical_failure": {
+        "n": 12,
+        "mean": 0.6532416666666666,
+        "std": 0.13093967006591126,
+        "sem": 0.03779902688007732,
+        "median": 0.6738999999999999,
+        "min": 0.4403,
+        "max": 0.9072,
+        "iqr": 0.14602499999999985
+      },
+      "C_decoy": {
+        "n": 12,
+        "mean": 0.7582833333333333,
+        "std": 0.0441911104457021,
+        "sem": 0.012756874755807295,
+        "median": 0.7587999999999999,
+        "min": 0.6578,
+        "max": 0.8186,
+        "iqr": 0.03210000000000002
+      },
+      "ranking": "C > A > B",
+      "correct_ranking": false,
+      "AUC_A_vs_B": {
+        "auc": 0.6944444444444444,
+        "U": 100.0,
+        "p": 0.11235119769046395,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.4583333333333333,
+          0.9166666666666666
+        ]
+      },
+      "AUC_A_vs_C": {
+        "auc": 0.5625,
+        "U": 81.0,
+        "p": 0.6235293969887796,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.3125,
+          0.8055555555555556
+        ]
+      },
+      "AUC_B_vs_C": {
+        "auc": 0.1875,
+        "U": 27.0,
+        "p": 0.010176681751551828,
+        "n1": 12,
+        "n2": 12
+      },
+      "cohens_d_A_vs_B": 0.44942125309516145,
+      "cohens_d_A_vs_C": -0.2574994213588021,
+      "kruskal_wallis": {
+        "H": 6.002273994937136,
+        "p": 0.049730492766414974
+      },
+      "spearman_vs_clinical": {
+        "rho": 0.003275116976985756,
+        "p": 0.9848752358891257
+      }
+    },
+    {
+      "name": "ADMET Proxy",
+      "n_total": 36,
+      "n_missing": 0,
+      "score_key": "admet_score",
+      "A_approved": {
+        "n": 12,
+        "mean": 0.6308666666666667,
+        "std": 0.137933668731376,
+        "sem": 0.0398180203861863,
+        "median": 0.65605,
+        "min": 0.2642,
+        "max": 0.7969,
+        "iqr": 0.07789999999999997
+      },
+      "B_clinical_failure": {
+        "n": 12,
+        "mean": 0.6806666666666666,
+        "std": 0.09137719362702883,
+        "sem": 0.026378323669178826,
+        "median": 0.6935,
+        "min": 0.5276,
+        "max": 0.8387,
+        "iqr": 0.09382500000000005
+      },
+      "C_decoy": {
+        "n": 12,
+        "mean": 0.7865166666666666,
+        "std": 0.017415867025285428,
+        "sem": 0.005027527757609634,
+        "median": 0.7903,
+        "min": 0.7645,
+        "max": 0.8184,
+        "iqr": 0.026125000000000065
+      },
+      "ranking": "C > B > A",
+      "correct_ranking": false,
+      "AUC_A_vs_B": {
+        "auc": 0.4097222222222222,
+        "U": 59.0,
+        "p": 0.47048642205878966,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.18055555555555555,
+          0.6458333333333334
+        ]
+      },
+      "AUC_A_vs_C": {
+        "auc": 0.06944444444444445,
+        "U": 10.0,
+        "p": 0.0003842020270349707,
+        "n1": 12,
+        "n2": 12,
+        "ci_95": [
+          0.0,
+          0.22916666666666666
+        ]
+      },
+      "AUC_B_vs_C": {
+        "auc": 0.1527777777777778,
+        "U": 22.0,
+        "p": 0.004264764914030538,
+        "n1": 12,
+        "n2": 12
+      },
+      "cohens_d_A_vs_B": -0.4256605500299372,
+      "cohens_d_A_vs_C": -1.5832858275300636,
+      "kruskal_wallis": {
+        "H": 14.66816816816818,
+        "p": 0.0006529016294364652
+      },
+      "spearman_vs_clinical": {
+        "rho": -0.6124074624324071,
+        "p": 7.1969449550867e-05
+      }
+    }
+  ],
+  "goodhart_gradient": {
+    "tool_dependence_order": [
+      "Direct LLM",
+      "LLM+Tools Agent",
+      "RDKit Pipeline",
+      "ADMET Proxy",
+      "DruGUI Pipeline"
+    ],
+    "rankings": [
+      "A > B > C",
+      "A > C > B",
+      "C > A > B",
+      "C > B > A",
+      "C > A > B"
+    ],
+    "correct_ranking": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "decoy_premium_pct": [
+      -12.607449856733524,
+      -31.287726358148895,
+      4.690681914930317,
+      24.672408327168966,
+      6.353223029123294
+    ],
+    "tool_vs_clinical_alignment": {
+      "rho": -0.7999999999999999,
+      "p": 0.10408803866182788
+    }
+  },
+  "failure_detection": {
+    "n_failures": 12,
+    "n_computational_systems": 3,
+    "computational_systems": [
+      "DruGUI Pipeline",
+      "RDKit Pipeline",
+      "ADMET Proxy"
+    ],
+    "n_undetectable_all": 1,
+    "pct_undetectable_all": 8.333333333333332,
+    "undetectable_all_names": [
+      "DSP-1181"
+    ],
+    "n_majority_pass": 1,
+    "pct_majority_pass": 8.333333333333332,
+    "majority_pass_names": [
+      "DSP-1181"
+    ],
+    "per_molecule": {
+      "BEN-2293": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 3,
+        "n_systems": 3
+      },
+      "Rofecoxib (Vioxx)": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline"
+        ],
+        "passed_all": false,
+        "n_flagged": 2,
+        "n_systems": 3
+      },
+      "Troglitazone": {
+        "flagged_by": [
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 2,
+        "n_systems": 3
+      },
+      "Ximelagatran": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 3,
+        "n_systems": 3
+      },
+      "Lorcainide": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 2,
+        "n_systems": 3
+      },
+      "Encainide": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 3,
+        "n_systems": 3
+      },
+      "EXS-21546": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 3,
+        "n_systems": 3
+      },
+      "DSP-1181": {
+        "flagged_by": [],
+        "passed_all": true,
+        "n_flagged": 0,
+        "n_systems": 3
+      },
+      "Torcetrapib": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 3,
+        "n_systems": 3
+      },
+      "Semagacestat": {
+        "flagged_by": [
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 2,
+        "n_systems": 3
+      },
+      "Evacetrapib": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline",
+          "ADMET Proxy"
+        ],
+        "passed_all": false,
+        "n_flagged": 3,
+        "n_systems": 3
+      },
+      "REC-994 (Tempol)": {
+        "flagged_by": [
+          "DruGUI Pipeline",
+          "RDKit Pipeline"
+        ],
+        "passed_all": false,
+        "n_flagged": 2,
+        "n_systems": 3
+      }
+    }
+  },
+  "recommendations": {
+    "Direct LLM": {
+      "A_approved": {
+        "Caution": 9,
+        "Advance": 2,
+        "Reject": 1
+      },
+      "B_clinical_failure": {
+        "Caution": 10,
+        "Advance": 1,
+        "Reject": 1
+      },
+      "C_decoy": {
+        "Caution": 11,
+        "Reject": 1
+      }
+    },
+    "LLM+Tools Agent": {
+      "A_approved": {
+        "Advance": 12
+      },
+      "B_clinical_failure": {
+        "Caution": 2,
+        "Reject": 7,
+        "Advance": 3
+      },
+      "C_decoy": {
+        "Caution": 9,
+        "Reject": 2,
+        "Advance": 1
+      }
+    }
+  }
+}

@@ -170,34 +170,43 @@ def fig3_cascading_valley():
 
 
 def fig4_goodhart_gradient():
-    """Figure 4: The Goodhart Gradient — our key empirical finding."""
-    fig, axes = plt.subplots(1, 2, figsize=(11, 5), gridspec_kw={'width_ratios': [1.3, 1]})
+    """Figure 4: The Goodhart Gradient — our key empirical finding.
+    Now includes all 5 systems (with ADMET Proxy) and bootstrap 95% CIs."""
+    fig, axes = plt.subplots(1, 2, figsize=(13, 5.5), gridspec_kw={'width_ratios': [1.3, 1]})
 
     # === Panel A: Category scores across systems ===
     ax = axes[0]
-    systems = ['Direct\nLLM', 'LLM +\nTools', 'DruGUI\nPipeline', 'RDKit\nPipeline']
+    systems = ['Direct\nLLM', 'LLM +\nTools', 'RDKit\nPipeline', 'ADMET\nProxy', 'DruGUI\nPipeline']
 
-    # Normalized scores (min-max within each system for comparability)
-    # Direct LLM: A=5.82, B=5.44, C=5.08
-    # LLM+Tools: A=8.28, B=4.94, C=5.69
-    # DruGUI: A=0.557, B=0.496, C=0.592
-    # RDKit: A=0.724, B=0.653, C=0.758
-
-    # Normalize to 0-1 within each system
+    # Raw mean scores from results_final_stats.json
+    # Ordered by tool dependence: LLM < LLM+Tools < RDKit < ADMET < DruGUI
     raw = [
-        [5.82, 5.44, 5.08],
-        [8.28, 4.94, 5.69],
-        [0.557, 0.496, 0.592],
-        [0.724, 0.653, 0.758],
+        [5.817, 5.442, 5.083],   # Direct LLM
+        [8.283, 4.942, 5.692],   # LLM+Tools
+        [0.724, 0.653, 0.758],   # RDKit Pipeline
+        [0.631, 0.681, 0.787],   # ADMET Proxy
+        [0.557, 0.496, 0.592],   # DruGUI Pipeline
     ]
+    # SEM values for error bars (also from results)
+    sem = [
+        [0.339, 0.301, 0.190],
+        [0.217, 0.575, 0.394],
+        [0.052, 0.038, 0.013],
+        [0.040, 0.026, 0.005],
+        [0.027, 0.028, 0.009],
+    ]
+
+    # Normalize to 0-1 within each system for visual comparison
     normalized = []
-    for r in raw:
+    norm_sem = []
+    for r, s in zip(raw, sem):
         mn, mx = min(r), max(r)
         rng = mx - mn if mx != mn else 1
         normalized.append([(v - mn) / rng for v in r])
+        norm_sem.append([sv / rng for sv in s])
 
     x = np.arange(len(systems))
-    width = 0.25
+    width = 0.22
 
     for i, (cat, color, label) in enumerate([
         (0, C_APPROVED, 'A: FDA-Approved'),
@@ -205,67 +214,88 @@ def fig4_goodhart_gradient():
         (2, C_DECOY, 'C: Decoys')
     ]):
         vals = [n[cat] for n in normalized]
+        errs = [ns[cat] for ns in norm_sem]
         bars = ax.bar(x + (i-1)*width, vals, width, color=color, label=label,
-                      edgecolor='white', linewidth=0.5, alpha=0.85)
+                      edgecolor='white', linewidth=0.5, alpha=0.85,
+                      yerr=errs, capsize=2, error_kw={'linewidth': 0.8, 'alpha': 0.6})
 
     # Ranking labels
-    rankings = ['A > B > C (correct)', 'A > C > B', 'C > A > B (inverted)', 'C > A > B (inverted)']
-    colors_rank = ['#27ae60', C_ACCENT, '#c0392b', '#c0392b']
+    rankings = ['A>B>C\n(correct)', 'A>C>B', 'C>A>B\n(inverted)', 'C>B>A\n(inverted)', 'C>A>B\n(inverted)']
+    colors_rank = ['#27ae60', C_ACCENT, '#c0392b', '#c0392b', '#c0392b']
     for i, (rank, col) in enumerate(zip(rankings, colors_rank)):
-        ax.text(i, 1.08, rank, ha='center', va='bottom', fontsize=7.5,
+        ax.text(i, 1.12, rank, ha='center', va='bottom', fontsize=6.5,
                 fontweight='bold', color=col)
 
     ax.set_xticks(x)
-    ax.set_xticklabels(systems)
+    ax.set_xticklabels(systems, fontsize=8)
     ax.set_ylabel('Normalized Score (within system)')
-    ax.set_ylim(0, 1.25)
-    ax.legend(loc='upper left', fontsize=8, framealpha=0.9)
+    ax.set_ylim(0, 1.35)
+    ax.legend(loc='upper left', fontsize=7.5, framealpha=0.9)
     ax.set_title('A. Category Rankings Across Systems', fontweight='bold', fontsize=11)
 
     # Arrow showing Goodhart direction
-    ax.annotate('', xy=(3.3, 0.15), xytext=(0.3, 0.95),
+    ax.annotate('', xy=(4.3, 0.15), xytext=(0.3, 0.95),
                 arrowprops=dict(arrowstyle='->', color=C_ACCENT, lw=2.5,
-                                connectionstyle='arc3,rad=-0.2'))
-    ax.text(2.0, 0.25, 'Goodhart\nGradient', fontsize=9, color=C_ACCENT,
-            fontweight='bold', ha='center', rotation=-20)
+                                connectionstyle='arc3,rad=-0.15'))
+    ax.text(2.5, 0.20, 'Goodhart\nGradient', fontsize=9, color=C_ACCENT,
+            fontweight='bold', ha='center', rotation=-15)
 
-    # === Panel B: AUC comparison ===
+    # === Panel B: AUC comparison with bootstrap CIs ===
     ax2 = axes[1]
-    systems_short = ['Direct\nLLM', 'LLM+\nTools', 'DruGUI', 'RDKit']
-    auc_ab = [0.642, 0.948, 0.667, 0.694]
-    auc_ac = [0.795, 0.951, 0.243, 0.562]
+    systems_short = ['Direct\nLLM', 'LLM+\nTools', 'RDKit', 'ADMET\nProxy', 'DruGUI']
+
+    # AUC values and 95% CIs from results_final_stats.json
+    auc_ab = [0.642, 0.948, 0.694, 0.410, 0.667]
+    auc_ab_ci_lo = [0.403, 0.847, 0.458, 0.181, 0.424]
+    auc_ab_ci_hi = [0.861, 1.000, 0.917, 0.646, 0.889]
+
+    auc_ac = [0.795, 0.951, 0.562, 0.069, 0.243]
+    auc_ac_ci_lo = [0.580, 0.851, 0.312, 0.000, 0.028]
+    auc_ac_ci_hi = [0.965, 1.000, 0.806, 0.229, 0.472]
 
     x2 = np.arange(len(systems_short))
-    width2 = 0.35
+    width2 = 0.32
+
+    # Error bars: distance from value to CI bounds
+    err_ab_lo = [a - l for a, l in zip(auc_ab, auc_ab_ci_lo)]
+    err_ab_hi = [h - a for a, h in zip(auc_ab, auc_ab_ci_hi)]
+    err_ac_lo = [a - l for a, l in zip(auc_ac, auc_ac_ci_lo)]
+    err_ac_hi = [h - a for a, h in zip(auc_ac, auc_ac_ci_hi)]
 
     bars1 = ax2.bar(x2 - width2/2, auc_ab, width2, color=C_DARK, label='AUC (A vs B)',
-                    alpha=0.85, edgecolor='white')
+                    alpha=0.85, edgecolor='white',
+                    yerr=[err_ab_lo, err_ab_hi], capsize=2.5,
+                    error_kw={'linewidth': 0.8, 'color': '#555'})
     bars2 = ax2.bar(x2 + width2/2, auc_ac, width2, color=C_ACCENT, label='AUC (A vs C)',
-                    alpha=0.85, edgecolor='white')
+                    alpha=0.85, edgecolor='white',
+                    yerr=[err_ac_lo, err_ac_hi], capsize=2.5,
+                    error_kw={'linewidth': 0.8, 'color': '#555'})
 
     # Random chance line
     ax2.axhline(y=0.5, color=C_GRAY, linestyle='--', linewidth=1, alpha=0.7, label='Random (0.5)')
 
     # Value labels
     for bar, val in zip(bars1, auc_ab):
-        ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
-                f'{val:.2f}', ha='center', va='bottom', fontsize=7, fontweight='bold')
+        y_pos = max(bar.get_height() + 0.04, 0.08)
+        ax2.text(bar.get_x() + bar.get_width()/2, y_pos,
+                f'{val:.2f}', ha='center', va='bottom', fontsize=6.5, fontweight='bold')
     for bar, val in zip(bars2, auc_ac):
         color = '#c0392b' if val < 0.5 else C_DARK
-        ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
-                f'{val:.2f}', ha='center', va='bottom', fontsize=7, fontweight='bold', color=color)
+        y_pos = max(bar.get_height() + 0.04, 0.08)
+        ax2.text(bar.get_x() + bar.get_width()/2, y_pos,
+                f'{val:.2f}', ha='center', va='bottom', fontsize=6.5, fontweight='bold', color=color)
 
-    # Highlight DruGUI A-vs-C below random
-    ax2.annotate('Below random!\nPrefers decoys', xy=(2 + width2/2, 0.243),
-                xytext=(2.8, 0.15), fontsize=7, color='#c0392b', fontweight='bold',
+    # Highlight ADMET Proxy A-vs-C extreme inversion
+    ax2.annotate('AUC=0.07\nExtreme\ninversion', xy=(3 + width2/2, 0.069),
+                xytext=(4.2, 0.35), fontsize=6.5, color='#c0392b', fontweight='bold',
                 arrowprops=dict(arrowstyle='->', color='#c0392b', lw=1))
 
     ax2.set_xticks(x2)
-    ax2.set_xticklabels(systems_short)
+    ax2.set_xticklabels(systems_short, fontsize=8)
     ax2.set_ylabel('Area Under Curve (AUC)')
-    ax2.set_ylim(0, 1.15)
-    ax2.legend(loc='upper left', fontsize=7.5, framealpha=0.9)
-    ax2.set_title('B. Discrimination Power (AUC)', fontweight='bold', fontsize=11)
+    ax2.set_ylim(0, 1.20)
+    ax2.legend(loc='upper left', fontsize=7, framealpha=0.9)
+    ax2.set_title('B. Discrimination Power (AUC) with 95% CI', fontweight='bold', fontsize=11)
 
     fig.suptitle('Figure 4: The Goodhart Gradient in AI Drug Discovery',
                  fontweight='bold', fontsize=13, y=1.02)
